@@ -1,0 +1,18 @@
+@use "../../styles/base.scss";
+
+.base {
+	width: 100%;
+	height: 100%;
+}
+
+.light {
+	@extend .base;
+	color: base.$light-mode-text-colour;
+	background-color: base.$light-mode-background-colour;
+}
+
+.dark {
+	@extend .base;
+	color: base.$dark-mode-text-colour;
+	background-color: base.$dark-mode-background-colour2;
+}
