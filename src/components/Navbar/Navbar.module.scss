@@ -1,0 +1,47 @@
+@use "../../styles/base.scss";
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 100%;
+	z-index: 1;
+	background: linear-gradient(330deg, base.$palette8 0%, base.$palette5 100%);
+	display: flex;
+	justify-content: space-between;
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		width: 50%;
+		margin-left: 20px;
+
+		& img {
+			height: 80%;
+			width: auto;
+		}
+	}
+
+	&__links {
+		width: 20%;
+		min-width: 225px;
+		margin-right: 20px;
+
+		& ul {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			list-style-type: none;
+
+			& li a {
+				color: base.$palette2;
+				text-decoration: none;
+
+				&:hover {
+					color: base.$palette3;
+				}
+			}
+		}
+	}
+}

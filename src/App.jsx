@@ -1,21 +1,25 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./Normalise.css";
-import styles from "./App.module.scss";
 import BackgroundWrapper from "./components/BackgroundWrapper/BackgroundWrapper";
 import DarkModeContextProvider from "./components/contexts/DarkModeContextProvider/DarkModeContextProvider";
-import DarkToggle from "./components/DarkToggle/DarkToggle";
+import Navbar from "./components/Navbar/Navbar";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import styles from "./App.module.scss";
 
 const App = () => {
 	return (
-		<>
+		<div className={styles.app}>
 			<DarkModeContextProvider>
 				<BackgroundWrapper>
-					<div className={styles.app}>
-						<DarkToggle />
-						<p>Here is a test paragraph</p>
-					</div>
+					<BrowserRouter>
+						<Navbar />
+						<Routes>
+							<Route path='/' element={<LandingPage />} />
+						</Routes>
+					</BrowserRouter>
 				</BackgroundWrapper>
 			</DarkModeContextProvider>
-		</>
+		</div>
 	);
 };
 

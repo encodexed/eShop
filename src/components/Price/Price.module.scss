@@ -1,0 +1,21 @@
+@use "../../styles/base.scss";
+
+.price {
+	&__container {
+		width: min-content;
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+	}
+
+	&__original_price {
+		background-color: base.$palette7;
+		padding: 2px;
+		text-decoration: red line-through;
+	}
+
+	&__discount_price {
+		background-color: red;
+		padding: 2px;
+	}
+}

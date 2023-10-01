@@ -1,0 +1,59 @@
+@use "../../styles/base.scss";
+
+.featured_item {
+	width: 100%;
+	height: 400px;
+	display: flex;
+	justify-content: items;
+	align-items: center;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+
+	&__main_image {
+		&__container {
+			height: 100%;
+			width: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__content {
+			width: auto;
+			height: 100%;
+			object-fit: fill;
+		}
+	}
+
+	&__info {
+		&_container {
+			height: 100%;
+			width: 50%;
+			background: black;
+		}
+
+		&__content {
+			margin: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			&__title {
+				font-size: 48px;
+				margin: 0;
+				color: white;
+			}
+
+			&__subtitle {
+				font-size: 20px;
+				margin: 0;
+				color: base.$palette2;
+			}
+
+			&__body_text {
+				font-weight: 300;
+				color: white;
+			}
+		}
+	}
+}

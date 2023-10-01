@@ -1,0 +1,27 @@
+{
+	"stock": [
+		{
+			"id": 1,
+			"categories": ["RPG", "Space", "Open World", "Sci-fi", "Singleplayer"],
+			"description": "Starfield is the first new universe in 25 years from Bethesda Game Studios, the award-winning creators of The Elder Scrolls V: Skyrim and Fallout 4.",
+			"developer": "Bethesda Game Studios",
+			"discountFactor": 0.85,
+			"featured": true,
+			"imageLinks": [
+				"https://ea6kwt57nbj.exactdn.com/wp-content/uploads/2023/07/Starfield-Featured-Ecran-Partage.jpg",
+				"https://cdn.cloudflare.steamstatic.com/steam/apps/1716740/ss_4887dc140a637684ddcfca518458668409f946dc.600x338.jpg"
+			],
+			"price": 119.95,
+			"publisher": "Bethesda Softworks",
+			"rating": "Mature",
+			"reviewScore": 75,
+			"stock": {
+				"pc": 15,
+				"playstation": -1,
+				"switch": -1,
+				"xbox": 10
+			},
+			"title": "Starfield"
+		}
+	]
+}
