@@ -1,5 +1,6 @@
 import styles from "./LandingPage.module.scss";
 import FeaturedItems from "../../components/FeaturedItems/FeaturedItems";
+
 const LandingPage = () => {
 	return (
 		<div className={styles.landing_page}>
