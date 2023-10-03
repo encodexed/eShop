@@ -1,9 +1,12 @@
+import { NavLink } from "react-router-dom";
 import styles from "./Button.module.scss";
 
-const Button = ({ onClick, text }) => {
+const Button = ({ route, text }) => {
 	return (
-		<button className={styles.button} onClick={onClick}>
-			{text}
+		<button className={styles.button}>
+			<NavLink className={styles.button__link} to={route}>
+				{text}
+			</NavLink>
 		</button>
 	);
 };

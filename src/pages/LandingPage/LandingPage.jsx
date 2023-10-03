@@ -12,10 +12,7 @@ const LandingPage = () => {
 					<p className={styles.landing_content__flavour_text}>
 						All manner of games and gifts for sale...
 					</p>
-					<Button
-						onClick={() => console.log("click")}
-						text='Come see our wares...'
-					/>
+					<Button route='/wares' text='Come see our wares...' />
 				</div>
 			</main>
 		</div>
