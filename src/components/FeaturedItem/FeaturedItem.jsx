@@ -19,7 +19,10 @@ const FeaturedItem = ({ data }) => {
 		stock,
 	} = data;
 	return (
-		<div className={styles.featured_item}>
+		<div
+			onClick={() => console.log(`clicked ${title} card`)}
+			className={styles.featured_item}
+		>
 			<div className={styles.featured_item__main_image__container}>
 				<img
 					className={styles.featured_item__main_image__content}
