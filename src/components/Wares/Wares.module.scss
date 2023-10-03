@@ -1,0 +1,14 @@
+@use "../../styles/base.scss";
+
+.wares {
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__heading {
+		font-size: 48px;
+		font-family: base.$heading-font;
+		margin: 0;
+	}
+}

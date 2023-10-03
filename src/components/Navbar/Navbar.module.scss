@@ -7,11 +7,10 @@
 	height: 50px;
 	width: 100%;
 	z-index: 1;
-	// background: linear-gradient(330deg, base.$palette8 0%, base.$palette5 100%);
 	background-color: base.$palette8;
 	display: flex;
 	justify-content: space-between;
-	font-family: "Macondo", cursive;
+	font-family: base.$heading-font;
 
 	&__logo {
 		display: flex;
