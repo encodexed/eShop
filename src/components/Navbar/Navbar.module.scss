@@ -13,6 +13,7 @@
 
 	&__logo {
 		display: flex;
+		gap: 20px;
 		align-items: center;
 		width: 50%;
 		margin-left: 20px;
@@ -21,6 +22,12 @@
 			height: 80%;
 			width: auto;
 		}
+	}
+
+	&__brand_text {
+		font-size: 32px;
+		text-wrap: nowrap;
+		overflow: hidden;
 	}
 
 	&__links {

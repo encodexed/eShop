@@ -7,6 +7,7 @@ const Navbar = () => {
 		<nav className={styles.navbar}>
 			<div className={styles.navbar__logo}>
 				<img src={logo} alt='Website logo' />
+				<h4 className={styles.navbar__brand_text}>The Shady Merchant</h4>
 			</div>
 			<div className={styles.navbar__links}>
 				<ul>
