@@ -13,6 +13,6 @@
 
 .dark {
 	@extend .base;
-	color: base.$dark-mode-text-colour;
-	background-color: base.$dark-mode-background-colour2;
+	color: white;
+	background-color: black;
 }

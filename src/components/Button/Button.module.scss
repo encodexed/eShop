@@ -1,0 +1,15 @@
+@use "../../styles/base.scss";
+
+.button {
+	cursor: pointer;
+	// background-color: base.$palette8;
+	background-color: transparent;
+	border: 2px solid white;
+	color: white;
+	padding: 8px;
+	border-radius: 10px;
+
+	&:hover {
+		background-color: base.$palette8;
+	}
+}

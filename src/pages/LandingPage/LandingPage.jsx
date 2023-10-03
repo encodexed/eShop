@@ -1,13 +1,23 @@
 import styles from "./LandingPage.module.scss";
-import FeaturedItems from "../../components/FeaturedItems/FeaturedItems";
+import Button from "../../components/Button/Button";
 
 const LandingPage = () => {
 	return (
 		<div className={styles.landing_page}>
-			<FeaturedItems />
-			<div className={styles.landing_page__text}>
-				<h1>Welcome</h1>
-			</div>
+			<main className={styles.landing_content}>
+				<div className={styles.landing_content__container}>
+					<h1 className={styles.landing_content__heading}>
+						The Mysterious Stranger
+					</h1>
+					<p className={styles.landing_content__flavour_text}>
+						All manner of games and gifts for sale...
+					</p>
+					<Button
+						onClick={() => console.log("click")}
+						text='Come see our wares...'
+					/>
+				</div>
+			</main>
 		</div>
 	);
 };

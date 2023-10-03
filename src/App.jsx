@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./Normalise.css";
 import BackgroundWrapper from "./components/BackgroundWrapper/BackgroundWrapper";
 import DarkModeContextProvider from "./components/contexts/DarkModeContextProvider/DarkModeContextProvider";
-import Navbar from "./components/Navbar/Navbar";
+// import Navbar from "./components/Navbar/Navbar";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import styles from "./App.module.scss";
 
@@ -12,7 +12,7 @@ const App = () => {
 			<DarkModeContextProvider>
 				<BackgroundWrapper>
 					<BrowserRouter>
-						<Navbar />
+						{/* <Navbar /> */}
 						<Routes>
 							<Route path='/' element={<LandingPage />} />
 						</Routes>

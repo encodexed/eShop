@@ -7,9 +7,11 @@
 	height: 50px;
 	width: 100%;
 	z-index: 1;
-	background: linear-gradient(330deg, base.$palette8 0%, base.$palette5 100%);
+	// background: linear-gradient(330deg, base.$palette8 0%, base.$palette5 100%);
+	background-color: base.$palette8;
 	display: flex;
 	justify-content: space-between;
+	font-family: "Macondo", cursive;
 
 	&__logo {
 		display: flex;
@@ -25,7 +27,7 @@
 	}
 
 	&__brand_text {
-		font-size: 32px;
+		font-size: 28px;
 		text-wrap: nowrap;
 		overflow: hidden;
 	}
@@ -42,7 +44,7 @@
 			list-style-type: none;
 
 			& li a {
-				color: base.$palette2;
+				color: white;
 				text-decoration: none;
 
 				&:hover {
