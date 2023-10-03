@@ -1,0 +1,14 @@
+@use "../../styles/base.scss";
+
+.platforms {
+	font-size: 14px;
+	margin: 0;
+
+	&__key {
+		color: base.$key-color;
+	}
+
+	&__content {
+		color: white;
+	}
+}

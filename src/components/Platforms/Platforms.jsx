@@ -1,4 +1,5 @@
-/* eslint-disable no-fallthrough */
+import styles from "./Platforms.module.scss";
+
 const Platforms = ({ stock }) => {
 	let { pc, xbox, playstation, nSwitch } = stock;
 	let newStrArray = [];
@@ -18,7 +19,12 @@ const Platforms = ({ stock }) => {
 
 	const platforms = newStrArray.join(", ");
 
-	return <p>{platforms}</p>;
+	return (
+		<p className={styles.platforms}>
+			<span className={styles.platforms__key}>Platforms: </span>
+			<span className={styles.platforms__content}>{platforms}</span>
+		</p>
+	);
 };
 
 export default Platforms;

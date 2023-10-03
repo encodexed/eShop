@@ -2,14 +2,22 @@ import styles from "./FeaturedItem.module.scss";
 import FeaturedTag from "../FeaturedTag/FeaturedTag";
 import Price from "../Price/Price";
 import Platforms from "../Platforms/Platforms";
+import Categories from "../Categories/Categories";
 
 const FeaturedItem = ({ data }) => {
-	console.log({ data });
 	if (!data) {
 		return <div>Loading...</div>;
 	}
 
-	const { title, description, imageLinks, price, discountFactor, stock } = data;
+	const {
+		title,
+		categories,
+		description,
+		imageLinks,
+		price,
+		discountFactor,
+		stock,
+	} = data;
 	return (
 		<div className={styles.featured_item}>
 			<div className={styles.featured_item__main_image__container}>
@@ -25,6 +33,7 @@ const FeaturedItem = ({ data }) => {
 					<h2 className={styles.featured_item__info__content__title}>
 						{title}
 					</h2>
+					<Categories categories={categories} />
 					<Platforms stock={stock} />
 					<Price originalPrice={price} discountFactor={discountFactor} />
 					<p className={styles.featured_item__info__content__body_text}>

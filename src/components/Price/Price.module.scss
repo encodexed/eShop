@@ -2,25 +2,19 @@
 
 .price {
 	&__container {
-		width: min-content;
+		margin-top: 16px;
 		display: flex;
-		justify-content: space-between;
-		gap: 10px;
 	}
 
 	&__original_price {
 		background-color: base.$palette7;
-		padding: 2px;
-		text-decoration: red line-through;
+		padding: 3px;
+		color: base.$key-color;
+		text-decoration: line-through red;
 	}
 
 	&__discount_price {
-		background-color: red;
-		padding: 2px;
-	}
-
-	&__discount_percentage {
 		background-color: green;
-		padding: 2px;
+		padding: 3px;
 	}
 }
