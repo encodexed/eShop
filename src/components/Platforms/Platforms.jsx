@@ -14,7 +14,7 @@ const Platforms = ({ stock }) => {
 		newStrArray.push("Playstation");
 	}
 	if (nSwitch > -1) {
-		newStrArray.push("Switch");
+		newStrArray.push("Nintendo Switch");
 	}
 
 	const platforms = newStrArray.join(", ");

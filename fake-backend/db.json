@@ -45,6 +45,121 @@
 				"xbox": 15
 			},
 			"title": "Elden Ring"
+		},
+		{
+			"id": "3",
+			"categories": ["RPG", "Choices Matter", "Story Rich", "Adventure"],
+			"description": "Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons & Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
+			"developer": "Larian Studios",
+			"discountFactor": 1,
+			"featured": false,
+			"imageLinks": [
+				"https://miro.medium.com/v2/resize:fit:1200/0*0bukiqD7QkSm1La_",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1086940/ss_cf936d31061b58e98e0c646aee00e6030c410cda.600x338.jpg"
+			],
+			"price": 89.95,
+			"publisher": ["Larian Studios"],
+			"rating": "18+",
+			"reviewScore": 96,
+			"stock": {
+				"pc": 5,
+				"playstation": 10,
+				"nSwitch": -1,
+				"xbox": -1
+			},
+			"title": "Baldur's Gate 3"
+		},
+		{
+			"id": "4",
+			"categories": ["Action", "Adventure"],
+			"description": "Explore a mysterious new world either solo or with a friend, discover new Copy Abilities and battle a bevy of beasts in Kirby and the Forgotten Land on Nintendo Switch!",
+			"developer": "HAL Laboratory",
+			"discountFactor": 0.92,
+			"featured": true,
+			"imageLinks": [
+				"https://img-eshop.cdn.nintendo.net/i/6290742634179fa1d0059d758cb22b81f27e8014d78abed51cb9eb07cead99b5.jpg",
+				"https://assets.nintendo.eu/image/upload/c_scale,f_auto,q_auto/v1646612493/KirbyAndTheForgottenLand_CopyPaste_Scr_02.jpg"
+			],
+			"price": 69,
+			"publisher": ["Nintendo"],
+			"rating": "Mature",
+			"reviewScore": 95,
+			"stock": {
+				"pc": -1,
+				"playstation": -1,
+				"nSwitch": 25,
+				"xbox": -1
+			},
+			"title": "Kirby and the Forgotten Land"
+		},
+		{
+			"id": "5",
+			"categories": ["Space", "Automation", "Base Building", "Open World"],
+			"description": "Build the most efficient intergalactic factory in space simulation strategy game Dyson Sphere Program! Harness the power of stars, collect resources, plan and design production lines and develop your interstellar factory from a small space workshop to a galaxy-wide industrial empire.",
+			"developer": "Youthcat Studio",
+			"discountFactor": 1,
+			"featured": false,
+			"imageLinks": [
+				"https://m.media-amazon.com/images/I/71tk396d+8S._AC_UF1000,1000_QL80_.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1366540/ss_475933730894ab89e3a8b961f8fc18399ee2a1df.600x338.jpg"
+			],
+			"price": 28.95,
+			"publisher": ["Gamera Games"],
+			"rating": "Parental Guidance",
+			"reviewScore": 97,
+			"stock": {
+				"pc": 20,
+				"playstation": -1,
+				"nSwitch": -1,
+				"xbox": -1
+			},
+			"title": "Dyson Sphere Program"
+		},
+		{
+			"id": "6",
+			"categories": ["FPS", "Shooter", "Multiplayer", "Competitive", "Action"],
+			"description": "For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.",
+			"developer": "Valve",
+			"discountFactor": 1,
+			"featured": false,
+			"imageLinks": [
+				"https://sm.ign.com/ign_in/screenshot/default/mg-35_u958.png",
+				"https://cdn.akamai.steamstatic.com/steam/apps/730/ss_ef82850f036dac5772cb07dbc2d1116ea13eb163.600x338.jpg"
+			],
+			"price": 0,
+			"publisher": ["Valve"],
+			"rating": "Mature",
+			"reviewScore": 73,
+			"stock": {
+				"pc": 20,
+				"playstation": -1,
+				"nSwitch": -1,
+				"xbox": -1
+			},
+			"title": "Counter-Strike 2"
+		},
+		{
+			"id": "7",
+			"categories": ["Superhero", "Open World", "Action", "Singleplayer"],
+			"description": "In Marvel’s Spider-Man Remastered, the worlds of Peter Parker and Spider-Man collide in an original action-packed story. Play as an experienced Peter Parker, fighting big crime and iconic villains in Marvel’s New York. Web-swing through vibrant neighborhoods and defeat villains with epic takedowns.",
+			"developer": "Insomniac Games",
+			"discountFactor": 1,
+			"featured": false,
+			"imageLinks": [
+				"https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/spider-man-remastered-pc-geforce-rtx-dlss-ray-tracing-out-now/marvels-spider-man-remastered-rtxon-ray-tracing-dlss-out-now-ogimage.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_ad14a7daa190cb150fbb070afc70bc64d66a5e2e.600x338.jpg"
+			],
+			"price": 94.95,
+			"publisher": ["Playstation PC LLC"],
+			"rating": "Mature",
+			"reviewScore": 94,
+			"stock": {
+				"pc": 5,
+				"playstation": 10,
+				"nSwitch": -1,
+				"xbox": -1
+			},
+			"title": "Marvel's Spider-Man Remastered"
 		}
 	]
 }
