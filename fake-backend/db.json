@@ -9,7 +9,8 @@
 			"featured": true,
 			"imageLinks": [
 				"https://ea6kwt57nbj.exactdn.com/wp-content/uploads/2023/07/Starfield-Featured-Ecran-Partage.jpg",
-				"https://cdn.cloudflare.steamstatic.com/steam/apps/1716740/ss_4887dc140a637684ddcfca518458668409f946dc.600x338.jpg"
+				"https://cdn.cloudflare.steamstatic.com/steam/apps/1716740/ss_4887dc140a637684ddcfca518458668409f946dc.600x338.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1716740/ss_b2821283cb140cd5a6289a8160016b6a60d8f96e.600x338.jpg"
 			],
 			"price": 119.95,
 			"publisher": ["Bethesda Softworks"],
@@ -32,7 +33,8 @@
 			"featured": true,
 			"imageLinks": [
 				"https://www.journaldugeek.com/content/uploads/2021/10/template-jdg-2021-10-18t165104-139.jpg",
-				"https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_ae44317e3bd07b7690b4d62cc5d0d1df30367a91.600x338.jpg"
+				"https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_ae44317e3bd07b7690b4d62cc5d0d1df30367a91.600x338.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_b70e156adf9e40aed24c10fb352b7813586e7290.600x338.jpg"
 			],
 			"price": 89.95,
 			"publisher": ["FromSoftware Inc.", "Bandai Namco Entertainment"],
@@ -55,7 +57,8 @@
 			"featured": false,
 			"imageLinks": [
 				"https://miro.medium.com/v2/resize:fit:1200/0*0bukiqD7QkSm1La_",
-				"https://cdn.akamai.steamstatic.com/steam/apps/1086940/ss_cf936d31061b58e98e0c646aee00e6030c410cda.600x338.jpg"
+				"https://cdn.akamai.steamstatic.com/steam/apps/1086940/ss_cf936d31061b58e98e0c646aee00e6030c410cda.600x338.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1086940/ss_0efa1a469a37beeb4fd0cb8e16dc99bd36357dc4.600x338.jpg"
 			],
 			"price": 89.95,
 			"publisher": ["Larian Studios"],
@@ -78,7 +81,8 @@
 			"featured": true,
 			"imageLinks": [
 				"https://img-eshop.cdn.nintendo.net/i/6290742634179fa1d0059d758cb22b81f27e8014d78abed51cb9eb07cead99b5.jpg",
-				"https://assets.nintendo.eu/image/upload/c_scale,f_auto,q_auto/v1646612493/KirbyAndTheForgottenLand_CopyPaste_Scr_02.jpg"
+				"https://assets.nintendo.eu/image/upload/c_scale,f_auto,q_auto/v1646612493/KirbyAndTheForgottenLand_CopyPaste_Scr_02.jpg",
+				"https://www.denofgeek.com/wp-content/uploads/2022/03/Kirby-and-the-Fogotten-Lands.jpg"
 			],
 			"price": 69,
 			"publisher": ["Nintendo"],
@@ -101,7 +105,8 @@
 			"featured": false,
 			"imageLinks": [
 				"https://m.media-amazon.com/images/I/71tk396d+8S._AC_UF1000,1000_QL80_.jpg",
-				"https://cdn.akamai.steamstatic.com/steam/apps/1366540/ss_475933730894ab89e3a8b961f8fc18399ee2a1df.600x338.jpg"
+				"https://cdn.akamai.steamstatic.com/steam/apps/1366540/ss_475933730894ab89e3a8b961f8fc18399ee2a1df.600x338.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1366540/ss_1f699b2ba7ce5025064050cf5498f6a576b89d31.600x338.jpg"
 			],
 			"price": 28.95,
 			"publisher": ["Gamera Games"],
@@ -124,7 +129,8 @@
 			"featured": false,
 			"imageLinks": [
 				"https://sm.ign.com/ign_in/screenshot/default/mg-35_u958.png",
-				"https://cdn.akamai.steamstatic.com/steam/apps/730/ss_ef82850f036dac5772cb07dbc2d1116ea13eb163.600x338.jpg"
+				"https://cdn.akamai.steamstatic.com/steam/apps/730/ss_ef82850f036dac5772cb07dbc2d1116ea13eb163.600x338.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/730/ss_d830cfd0550fbb64d80e803e93c929c3abb02056.600x338.jpg"
 			],
 			"price": 0,
 			"publisher": ["Valve"],
@@ -147,7 +153,8 @@
 			"featured": false,
 			"imageLinks": [
 				"https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/spider-man-remastered-pc-geforce-rtx-dlss-ray-tracing-out-now/marvels-spider-man-remastered-rtxon-ray-tracing-dlss-out-now-ogimage.jpg",
-				"https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_ad14a7daa190cb150fbb070afc70bc64d66a5e2e.600x338.jpg"
+				"https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_ad14a7daa190cb150fbb070afc70bc64d66a5e2e.600x338.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_7c2b250a3dfcf7a48b61e6b911894be1d78be8ec.600x338.jpg"
 			],
 			"price": 94.95,
 			"publisher": ["Playstation PC LLC"],
