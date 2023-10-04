@@ -1,6 +1,7 @@
 import styles from "./Ware.module.scss";
-import Button from "../Button/Button";
 import Price from "../Price/Price";
+import { NavLink } from "react-router-dom";
+import ReviewScore from "../ReviewScore/ReviewScore";
 
 const Ware = ({ data }) => {
 	const { id, imageLinks, title, price, discountFactor, reviewScore } = data;
@@ -15,46 +16,45 @@ const Ware = ({ data }) => {
 
 	return (
 		<article className={styles.ware__container}>
-			<div className={styles.ware__images__container}>
-				<div className={styles.ware__images__left}>
-					<img
-						className={styles.ware__images__img}
-						src={imageLinks[0]}
-						alt={`Cover art for ${title}`}
-					/>
-				</div>
+			<NavLink className={styles.ware__nav_link} to={`/wares/${id}/${slug}`}>
+				<div className={styles.ware__images__container}>
+					<div className={styles.ware__images__left}>
+						<img
+							className={styles.ware__images__img}
+							src={imageLinks[0]}
+							alt={`Cover art for ${title}`}
+						/>
+					</div>
 
-				<div className={styles.ware__images__right}>
-					<div>
-						<img
-							className={styles.ware__images__img}
-							src={imageLinks[1]}
-							alt={`Cover art for ${title}`}
-						/>
-					</div>
-					<div>
-						<img
-							className={styles.ware__images__img}
-							src={imageLinks[2]}
-							alt={`Cover art for ${title}`}
-						/>
-					</div>
-				</div>
-			</div>
-			<div className={styles.ware__text__container}>
-				<div className={styles.ware__text__container__left}>
-					<div className={styles.ware__text__title}>{title}</div>
-					<div className={styles.ware__text__more_info}>
-						<div className={styles.ware__text__price}>
-							<Price originalPrice={price} discountFactor={discountFactor} />
+					<div className={styles.ware__images__right}>
+						<div>
+							<img
+								className={styles.ware__images__img}
+								src={imageLinks[1]}
+								alt={`Cover art for ${title}`}
+							/>
 						</div>
-						<div className={styles.ware__text__reviews}>{reviewScore}/100</div>
+						<div>
+							<img
+								className={styles.ware__images__img}
+								src={imageLinks[2]}
+								alt={`Cover art for ${title}`}
+							/>
+						</div>
 					</div>
 				</div>
-				<div className={styles.ware__text__container__right}>
-					<Button route={`/wares/${id}/${slug}`} text='See more' />
+				<div className={styles.ware__text__container}>
+					<div className={styles.ware__text__container__left}>
+						<div className={styles.ware__text__title}>{title}</div>
+					</div>
+					<div className={styles.ware__text__container__middle}>
+						<ReviewScore score={reviewScore} />
+					</div>
+					<div className={styles.ware__text__container__right}>
+						<Price originalPrice={price} discountFactor={discountFactor} />
+					</div>
 				</div>
-			</div>
+			</NavLink>
 		</article>
 	);
 };

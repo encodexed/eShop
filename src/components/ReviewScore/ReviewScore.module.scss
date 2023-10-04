@@ -1,0 +1,46 @@
+.review_score {
+	padding: 3px;
+	font-size: 14px;
+}
+
+.legendary {
+	@extend .review_score;
+	background-color: gold;
+	color: black;
+}
+
+.epic {
+	@extend .review_score;
+	background-color: #f700ff;
+	color: white;
+}
+
+.rare {
+	@extend .review_score;
+	background-color: rgb(0, 85, 255);
+	color: white;
+}
+
+.uncommon {
+	@extend .review_score;
+	background-color: #00ff40;
+	color: black;
+}
+
+.common {
+	@extend .review_score;
+	background-color: #dedede;
+	color: black;
+}
+
+.low {
+	@extend .review_score;
+	background-color: #646464;
+	color: black;
+}
+
+.junk {
+	@extend .review_score;
+	background-color: rgb(85, 40, 0);
+	color: yellow;
+}

@@ -3,6 +3,13 @@
 .price {
 	&__container {
 		display: flex;
+		font-size: 14px;
+	}
+
+	&__free {
+		background-color: gold;
+		color: black;
+		padding: 3px;
 	}
 
 	&__original_price {
