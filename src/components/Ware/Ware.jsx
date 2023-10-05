@@ -3,16 +3,10 @@ import Price from "../Price/Price";
 import { NavLink } from "react-router-dom";
 import ReviewScore from "../ReviewScore/ReviewScore";
 import Heading from "../Heading/Heading";
+import { createSlug } from "../../services/basic-services";
 
 const Ware = ({ data }) => {
 	const { id, imageLinks, title, price, discountFactor, reviewScore } = data;
-
-	const createSlug = (text) => {
-		let newStr = text.replaceAll(" ", "_");
-		newStr = newStr.replaceAll("'", "");
-		newStr = newStr.replaceAll('"', "");
-		return newStr;
-	};
 	const slug = createSlug(title);
 
 	return (

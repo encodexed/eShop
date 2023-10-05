@@ -38,3 +38,10 @@ export const getQuality = (score) => {
 		cssClass,
 	};
 };
+
+export const createSlug = (text) => {
+	let newStr = text.replaceAll(" ", "_");
+	newStr = newStr.replaceAll("'", "");
+	newStr = newStr.replaceAll('"', "");
+	return newStr;
+};

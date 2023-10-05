@@ -3,6 +3,8 @@ import FeaturedTag from "../FeaturedTag/FeaturedTag";
 import Price from "../Price/Price";
 import Platforms from "../Platforms/Platforms";
 import Categories from "../Categories/Categories";
+import { NavLink } from "react-router-dom";
+import { createSlug } from "../../services/basic-services";
 
 const FeaturedItem = ({ data }) => {
 	if (!data) {
@@ -13,16 +15,17 @@ const FeaturedItem = ({ data }) => {
 		title,
 		categories,
 		description,
+		id,
 		imageLinks,
 		price,
 		discountFactor,
 		stock,
 	} = data;
+
+	const slug = createSlug(title);
+
 	return (
-		<div
-			onClick={() => console.log(`clicked ${title} card`)}
-			className={styles.featured_item}
-		>
+		<NavLink to={`/wares/${id}/${slug}`} className={styles.featured_item}>
 			<div className={styles.featured_item__main_image__container}>
 				<img
 					className={styles.featured_item__main_image__content}
@@ -41,14 +44,14 @@ const FeaturedItem = ({ data }) => {
 					<Price
 						originalPrice={price}
 						discountFactor={discountFactor}
-						marginTop='16px'
+						marginTop='16'
 					/>
 					<p className={styles.featured_item__info__content__body_text}>
 						{description}
 					</p>
 				</div>
 			</div>
-		</div>
+		</NavLink>
 	);
 };
 
