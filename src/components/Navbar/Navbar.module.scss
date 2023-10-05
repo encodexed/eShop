@@ -8,10 +8,17 @@
 	width: 100%;
 	z-index: 2;
 	background-color: base.$palette7;
-	display: flex;
-	justify-content: space-between;
 	font-family: base.$heading-font;
 	border-bottom: 2px solid black;
+	display: flex;
+	justify-content: center;
+
+	&__content_wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		max-width: base.$max-content-width;
+	}
 
 	&__logo {
 		display: flex;

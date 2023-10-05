@@ -39,9 +39,13 @@ const WarePage = () => {
 		<div className={styles.ware_page}>
 			<Navbar />
 			<main className={styles.ware_page__container}>
-				<Heading text={title} size='60px' />
-				<Gallery imageLinks={imageLinks} />
-				<Info data={wareData} />
+				<div className={styles.ware_page__content_wrapper}>
+					<div className={styles.ware_page__content_wrapper__inner}>
+						<Heading text={title} size='60px' />
+						<Gallery imageLinks={imageLinks} />
+						<Info data={wareData} />
+					</div>
+				</div>
 			</main>
 		</div>
 	);

@@ -3,12 +3,14 @@ import styles from "./Wares.module.scss";
 
 const Wares = () => {
 	return (
-		<main className={styles.wares}>
-			<h1 className={styles.wares__heading}>All Wares</h1>
-			{/* <SearchBar />
+		<div className={styles.wares__content_wrapper}>
+			<main className={styles.wares}>
+				<h1 className={styles.wares__heading}>All Wares</h1>
+				{/* <SearchBar />
       <Filters /> */}
-			<WaresList />
-		</main>
+				<WaresList />
+			</main>
+		</div>
 	);
 };
 
