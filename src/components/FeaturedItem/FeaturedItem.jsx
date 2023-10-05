@@ -1,10 +1,9 @@
 import styles from "./FeaturedItem.module.scss";
 import FeaturedTag from "../FeaturedTag/FeaturedTag";
 import Price from "../Price/Price";
-import Platforms from "../Platforms/Platforms";
-import Categories from "../Categories/Categories";
 import { NavLink } from "react-router-dom";
-import { createSlug } from "../../services/basic-services";
+import { createSlug, getPlatforms } from "../../services/basic-services";
+import DataSlice from "../DataSlice/DataSlice";
 
 const FeaturedItem = ({ data }) => {
 	if (!data) {
@@ -23,6 +22,8 @@ const FeaturedItem = ({ data }) => {
 	} = data;
 
 	const slug = createSlug(title);
+	const platforms = getPlatforms(stock);
+	const categoriesStr = categories.join(", ");
 
 	return (
 		<NavLink to={`/wares/${id}/${slug}`} className={styles.featured_item}>
@@ -39,8 +40,12 @@ const FeaturedItem = ({ data }) => {
 					<h2 className={styles.featured_item__info__content__title}>
 						{title}
 					</h2>
-					<Categories categories={categories} />
-					<Platforms stock={stock} />
+					<div>
+						<DataSlice listing='Categories' value={categoriesStr} />
+					</div>
+					<div>
+						<DataSlice listing='Platforms' value={platforms} />
+					</div>
 					<Price
 						originalPrice={price}
 						discountFactor={discountFactor}

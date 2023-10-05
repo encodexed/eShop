@@ -15,13 +15,20 @@
 
 	&__logo {
 		display: flex;
-		gap: 20px;
 		align-items: center;
-		margin-left: 20px;
+		&__link {
+			display: flex;
+			gap: 20px;
+			align-items: center;
+			margin-left: 20px;
+			color: white;
+			text-decoration: none;
+			height: 100%;
 
-		& img {
-			height: 80%;
-			width: auto;
+			& img {
+				height: 80%;
+				width: auto;
+			}
 		}
 	}
 

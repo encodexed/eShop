@@ -5,6 +5,7 @@ import styles from "./WarePage.module.scss";
 import Navbar from "../../components/Navbar/Navbar";
 import Heading from "../../components/Heading/Heading";
 import Gallery from "../../components/Gallery/Gallery";
+import Info from "../../components/Info/Info";
 
 const WarePage = () => {
 	const { id } = useParams();
@@ -32,20 +33,7 @@ const WarePage = () => {
 		);
 	}
 
-	const {
-		// categories,
-		// description,
-		// developer,
-		// discountFactor,
-		// featured,
-		imageLinks,
-		// price,
-		// publisher,
-		// rating,
-		// reviewScore,
-		// stock,
-		title,
-	} = wareData;
+	const { imageLinks, title } = wareData;
 
 	return (
 		<div className={styles.ware_page}>
@@ -53,6 +41,7 @@ const WarePage = () => {
 			<main className={styles.ware_page__container}>
 				<Heading text={title} size='60px' />
 				<Gallery imageLinks={imageLinks} />
+				<Info data={wareData} />
 			</main>
 		</div>
 	);

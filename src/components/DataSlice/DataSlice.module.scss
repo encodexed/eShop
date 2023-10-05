@@ -1,14 +1,15 @@
 @use "../../styles/base.scss";
 
-.platforms {
+.data_slice {
 	font-size: 14px;
-	margin: 0;
 
-	&__key {
+	&__listing {
+		@extend .data_slice;
 		color: base.$key-color;
 	}
 
-	&__content {
+	&__value {
+		@extend .data_slice;
 		color: white;
 	}
 }

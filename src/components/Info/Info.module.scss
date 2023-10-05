@@ -1,0 +1,31 @@
+.info {
+	margin-top: 20px;
+	height: 200px;
+	display: flex;
+	justify-content: space-between;
+
+	&__container {
+		&__left {
+			width: 45%;
+		}
+
+		&__right {
+			width: 45%;
+			display: flex;
+		}
+	}
+
+	&__description {
+		margin: 0;
+	}
+
+	&__list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		& li {
+			padding: 2px;
+		}
+	}
+}
