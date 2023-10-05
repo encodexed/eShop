@@ -65,3 +65,21 @@ export const getPlatforms = (stock) => {
 
 	return newStrArray.join(", ");
 };
+
+export const formatStockList = (stock) => {
+	const stockReadOut = {};
+	const stockArr = Object.entries(stock);
+	stockArr.forEach((platform) => {
+		if (platform[1] < 0) {
+			stockReadOut[platform[0]] = `Not available on this platform`;
+		} else if (platform[1] === 0) {
+			stockReadOut[platform[0]] = `Sold Out! (${platform[1]} remaining)`;
+		} else if (platform[1] > 0 && platform[1] <= 5) {
+			stockReadOut[platform[0]] = `Low Stock (${platform[1]} remaining)`;
+		} else {
+			stockReadOut[platform[0]] = `Good Stock (${platform[1]} remaining)`;
+		}
+	});
+
+	return stockReadOut;
+};
