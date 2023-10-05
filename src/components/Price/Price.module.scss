@@ -6,6 +6,7 @@
 		font-size: 14px;
 		height: fit-content;
 		margin-top: 2px;
+		color: white;
 	}
 
 	&__free {
@@ -29,6 +30,5 @@
 	&__regular_price {
 		background-color: base.$palette7;
 		padding: 3px;
-		color: white;
 	}
 }
