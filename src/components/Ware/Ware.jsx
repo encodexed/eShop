@@ -2,6 +2,7 @@ import styles from "./Ware.module.scss";
 import Price from "../Price/Price";
 import { NavLink } from "react-router-dom";
 import ReviewScore from "../ReviewScore/ReviewScore";
+import Heading from "../Heading/Heading";
 
 const Ware = ({ data }) => {
 	const { id, imageLinks, title, price, discountFactor, reviewScore } = data;
@@ -44,15 +45,11 @@ const Ware = ({ data }) => {
 					</div>
 				</div>
 				<div className={styles.ware__text__container}>
-					<div className={styles.ware__text__container__left}>
-						<div className={styles.ware__text__title}>{title}</div>
-					</div>
-					<div className={styles.ware__text__container__middle}>
-						<ReviewScore score={reviewScore} />
-					</div>
-					<div className={styles.ware__text__container__right}>
+					<div className={styles.ware__text__container__top}>
+						<Heading text={title} />
 						<Price originalPrice={price} discountFactor={discountFactor} />
 					</div>
+					<ReviewScore score={reviewScore} />
 				</div>
 			</NavLink>
 		</article>

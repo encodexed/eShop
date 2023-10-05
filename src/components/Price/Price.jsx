@@ -7,14 +7,16 @@ const Price = ({ originalPrice, discountFactor }) => {
 		.toString();
 	const discountAsPercentage = `${Math.floor((1 - discountFactor) * 100)}%`;
 
+	// Free game:
 	if (originalPrice === 0 || discountFactor === 0) {
 		return (
 			<div className={styles.price__container}>
-				<span className={styles.price__free}>Free</span>
+				<span className={styles.price__free}>Free Game!</span>
 			</div>
 		);
 	}
 
+	// Discounted game:
 	if (displayDiscount) {
 		return (
 			<div className={styles.price__container}>
@@ -22,6 +24,15 @@ const Price = ({ originalPrice, discountFactor }) => {
 				<span className={styles.price__discount_price}>
 					${discountNum} (-{discountAsPercentage})
 				</span>
+			</div>
+		);
+	}
+
+	// Regularly-priced game:
+	if (!displayDiscount) {
+		return (
+			<div className={styles.price__container}>
+				<span className={styles.price__regular_price}>${originalPrice}</span>
 			</div>
 		);
 	}

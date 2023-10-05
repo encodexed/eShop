@@ -13,10 +13,13 @@ const ReviewScore = ({ score }) => {
 	 */
 
 	const qualityIndicator = getQuality(score);
-	const reviewReadOut = `${qualityIndicator.quality} (${score}%)`;
+	const reviewReadOut = `${qualityIndicator.quality} (${score}% positive reviews)`;
 
 	return (
-		<div className={styles[qualityIndicator.cssClass]}>{reviewReadOut}</div>
+		<div className={styles[qualityIndicator.cssClass]}>
+			<span className={styles.quality}>Quality: </span>
+			{reviewReadOut}
+		</div>
 	);
 };
 

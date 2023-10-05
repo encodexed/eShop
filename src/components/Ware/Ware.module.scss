@@ -1,12 +1,20 @@
+// @use "../../styles/base.scss";
+
 .ware {
 	&__container {
-		width: 46%;
+		width: 45%;
 		height: 300px;
 		margin: 20px;
 		max-width: 700px;
 		background-color: black;
 		border-radius: 10px;
 		overflow: hidden;
+		border: 2px solid transparent;
+
+		&:hover {
+			border: 2px solid #dedede;
+			box-shadow: 0px 0px 15px 1px #000000;
+		}
 	}
 
 	&__nav_link {
@@ -51,42 +59,25 @@
 	&__text {
 		&__container {
 			height: 20%;
-			width: auto;
-			display: flex;
-
-			&__left {
-				height: 100%;
-				width: 40%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-
-			&__middle {
-				height: 100%;
-				width: 30%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-
-			&__right {
-				height: 100%;
-				width: 30%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-		}
-
-		&__title {
-			height: 50%;
 			width: 100%;
-		}
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-left: 5px;
 
-		&__price {
-			width: 50%;
-			height: auto;
+			&__top {
+				display: flex;
+				gap: 10px;
+			}
 		}
 	}
+}
+
+.experiment {
+	position: relative;
+	z-index: 1;
+	top: 0;
+	left: auto;
+	bottom: auto;
+	right: auto;
 }

@@ -38,7 +38,11 @@ const FeaturedItem = ({ data }) => {
 					</h2>
 					<Categories categories={categories} />
 					<Platforms stock={stock} />
-					<Price originalPrice={price} discountFactor={discountFactor} />
+					<Price
+						originalPrice={price}
+						discountFactor={discountFactor}
+						marginTop='16px'
+					/>
 					<p className={styles.featured_item__info__content__body_text}>
 						{description}
 					</p>
