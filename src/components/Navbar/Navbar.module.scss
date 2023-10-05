@@ -6,17 +6,17 @@
 	left: 0;
 	height: 50px;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
 	background-color: base.$palette7;
 	display: flex;
 	justify-content: space-between;
 	font-family: base.$heading-font;
+	border-bottom: 2px solid black;
 
 	&__logo {
 		display: flex;
 		gap: 20px;
 		align-items: center;
-		width: 50%;
 		margin-left: 20px;
 
 		& img {
@@ -32,24 +32,29 @@
 	}
 
 	&__links {
-		width: 20%;
-		min-width: 225px;
 		margin-right: 20px;
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-		& ul {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			list-style-type: none;
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+		color: white;
+		text-decoration: none;
 
-			& li a {
-				color: white;
-				text-decoration: none;
-
-				&:hover {
-					color: base.$palette3;
-				}
-			}
+		&:hover {
+			color: gold;
+			text-decoration: underline;
 		}
 	}
+}
+
+.cart {
+	width: 20px;
+	height: 20px;
 }
