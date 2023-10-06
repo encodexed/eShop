@@ -1,49 +1,31 @@
 import styles from "./Info.module.scss";
-import DataSlice from "../DataSlice/DataSlice";
-import ReviewScore from "../ReviewScore/ReviewScore";
-import { getPlatforms } from "../../services/basic-services";
+import Stock from "../Stock/Stock";
+import AddToCart from "../AddToCart/AddToCart";
+import Heading from "../Heading/Heading";
+import GameData from "../GameData/GameData";
 
 const Info = ({ data }) => {
-	const {
-		categories,
-		description,
-		developer,
-		publisher,
-		rating,
-		reviewScore,
-		stock,
-	} = data;
-
-	const platforms = getPlatforms(stock);
-	const categoriesStr = categories.join(", ");
+	const { description, stock } = data;
 
 	return (
 		<div className={styles.info}>
-			<div className={styles.info__container__left}>
+			<div className={styles.info__container__top}>
 				<p className={styles.info__description}>{description}</p>
 			</div>
-			<div className={styles.info__container__right}>
-				<div className={styles.info__info_1}>
-					<ul className={styles.info__list}>
-						<li>
-							<ReviewScore score={reviewScore} />
-						</li>
-						<li>
-							<DataSlice listing='Categories' value={categoriesStr} />
-						</li>
-						<li>
-							<DataSlice listing='Platforms' value={platforms} />
-						</li>
-						<li>
-							<DataSlice listing='Developer' value={developer} />
-						</li>
-						<li>
-							<DataSlice listing='Publisher' value={publisher} />
-						</li>
-						<li>
-							<DataSlice listing='Rating' value={rating} />
-						</li>
-					</ul>
+			<div className={styles.info__container__bottom}>
+				<div>
+					<div className={styles.info__info_1}>
+						<Heading text='Game Information' />
+						<GameData data={data} />
+					</div>
+				</div>
+				<div>
+					<Heading text='Remaining Stock' />
+					<Stock stock={stock} />
+				</div>
+				<div>
+					<Heading text='Add To Your Cart' />
+					<AddToCart />
 				</div>
 			</div>
 		</div>

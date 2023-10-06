@@ -6,7 +6,6 @@ import Navbar from "../../components/Navbar/Navbar";
 import Heading from "../../components/Heading/Heading";
 import Gallery from "../../components/Gallery/Gallery";
 import Info from "../../components/Info/Info";
-import AddToCart from "../../components/AddToCart/AddToCart";
 
 const WarePage = () => {
 	const { id } = useParams();
@@ -34,7 +33,7 @@ const WarePage = () => {
 		);
 	}
 
-	const { imageLinks, title, price, discountFactor, stock } = wareData;
+	const { imageLinks, title } = wareData;
 
 	return (
 		<div className={styles.ware_page}>
@@ -45,11 +44,6 @@ const WarePage = () => {
 						<Heading text={title} size='60px' />
 						<Gallery imageLinks={imageLinks} />
 						<Info data={wareData} />
-						<AddToCart
-							price={price}
-							discountFactor={discountFactor}
-							stock={stock}
-						/>
 					</div>
 				</div>
 			</main>
