@@ -6,8 +6,9 @@ import { useParams } from "react-router-dom";
 
 const AddToCart = () => {
 	const { addToCartState } = useContext(CartContext);
-	const quantityRef = useRef("1");
+	const quantityRef = useRef(null);
 	const platformRef = useRef(null);
+	const formRef = useRef(null);
 	const { id } = useParams();
 	const [status, setStatus] = useState(null);
 
@@ -31,6 +32,7 @@ const AddToCart = () => {
 		const isOrderValidated = await checkStock(orderInfo);
 		if (isOrderValidated === "Added to Cart!") {
 			addToCartState(orderInfo);
+			formRef.current.reset();
 		}
 
 		setStatus(isOrderValidated);
@@ -45,7 +47,7 @@ const AddToCart = () => {
 
 	return (
 		<>
-			<form className={styles.add_to_cart} onSubmit={onSubmit}>
+			<form className={styles.add_to_cart} onSubmit={onSubmit} ref={formRef}>
 				<div className={styles.add_to_cart__quantity}>
 					<label htmlFor='quantity'>Quantity: </label>
 					<input
