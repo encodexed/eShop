@@ -14,10 +14,8 @@ const Info = ({ data }) => {
 			</div>
 			<div className={styles.info__container__bottom}>
 				<div>
-					<div className={styles.info__info_1}>
-						<Heading text='Game Information' />
-						<GameData data={data} />
-					</div>
+					<Heading text='Game Information' />
+					<GameData data={data} />
 				</div>
 				<div>
 					<Heading text='Remaining Stock' />

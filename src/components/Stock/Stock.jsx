@@ -2,8 +2,6 @@ import { formatStockList } from "../../services/basic-services";
 import styles from "./Stock.module.scss";
 
 const Stock = ({ stock }) => {
-	console.log(stock);
-
 	const stockReadOut = formatStockList(stock);
 
 	return (

@@ -1,15 +1,21 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, createContext } from "react";
 export const CartContext = createContext(null);
 
 const CartContextProvider = ({ children }) => {
-	const [cart, setCart] = useState(null);
+	const [cart, setCart] = useState([]);
 
-	useEffect(() => {
-		// todo
-	}, []);
+	const addToCartState = (orderInfo) => {
+		setCart((prevState) => {
+			if (!prevState) {
+				return [orderInfo];
+			} else {
+				return [...prevState, orderInfo];
+			}
+		});
+	};
 
 	return (
-		<CartContext.Provider value={{ cart, setCart }}>
+		<CartContext.Provider value={{ cart, addToCartState }}>
 			{children}
 		</CartContext.Provider>
 	);

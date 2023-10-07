@@ -15,7 +15,6 @@ const WarePage = () => {
 		const fetchData = async (itemID) => {
 			try {
 				const data = await getItemById(itemID);
-				console.log(data);
 				setWareData(data);
 			} catch (e) {
 				console.error(e.message);

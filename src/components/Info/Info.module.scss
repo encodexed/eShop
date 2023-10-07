@@ -1,3 +1,5 @@
+@use "../../styles/base.scss";
+
 .info {
 	margin-top: 20px;
 	height: 200px;
@@ -9,6 +11,14 @@
 			margin-top: 20px;
 			display: flex;
 			justify-content: space-between;
+			border: 2px solid base.$key-color;
+			padding: 20px;
+
+			& > div {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
 		}
 	}
 
