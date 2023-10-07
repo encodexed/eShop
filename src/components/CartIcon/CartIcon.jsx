@@ -23,7 +23,7 @@ const CartIcon = () => {
 			<div className={cartBadgeStyles}>
 				<span>{cartItemCount}</span>
 			</div>
-			Cart
+			<span className={styles.cart__container__text}>Cart</span>
 			<img className={styles.cart__icon} src={Cart} alt='Cart icon' />
 		</NavLink>
 	);

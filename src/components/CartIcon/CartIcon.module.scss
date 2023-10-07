@@ -1,3 +1,5 @@
+@use "../../styles/base.scss";
+
 .cart {
 	&__icon {
 		width: 20px;
@@ -13,6 +15,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		font-family: base.$body-font;
+		font-size: 12px;
 	}
 
 	&__container {
@@ -23,6 +27,11 @@
 		color: white;
 		text-decoration: none;
 		margin-right: 20px;
+
+		&__text:hover {
+			color: gold;
+			text-decoration: underline;
+		}
 	}
 }
 
