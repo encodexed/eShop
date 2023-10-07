@@ -38,5 +38,5 @@ export const checkStock = async (orderInfo) => {
 		return "Sorry, this game doesn't have that much stock available";
 	}
 
-	return "Added to Cart";
+	return "Added to Cart!";
 };

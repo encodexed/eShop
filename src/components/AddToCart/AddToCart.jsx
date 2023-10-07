@@ -5,13 +5,11 @@ import { checkStock } from "../../services/fake-backend-services";
 import { useParams } from "react-router-dom";
 
 const AddToCart = () => {
-	const { cart, addToCartState } = useContext(CartContext);
-	const quantityRef = useRef(null);
+	const { addToCartState } = useContext(CartContext);
+	const quantityRef = useRef("1");
 	const platformRef = useRef(null);
 	const { id } = useParams();
 	const [status, setStatus] = useState(null);
-
-	console.log({ cart });
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
@@ -28,23 +26,27 @@ const AddToCart = () => {
 			},
 		};
 		orderInfo.platform[platform] = quantity;
-		console.log({ orderInfo });
 
 		// Check store data to make sure conditions are right
 		const isOrderValidated = await checkStock(orderInfo);
-		console.log({ isOrderValidated });
-
-		if (isOrderValidated === "Added to Cart") {
+		if (isOrderValidated === "Added to Cart!") {
 			addToCartState(orderInfo);
 		}
 
 		setStatus(isOrderValidated);
 	};
 
+	let statusClasses = styles.add_to_cart__status;
+	if (status === "Added to Cart!") {
+		statusClasses += ` ${styles.add_to_cart__status_okay}`;
+	} else {
+		statusClasses += ` ${styles.add_to_cart__status_error}`;
+	}
+
 	return (
 		<>
 			<form className={styles.add_to_cart} onSubmit={onSubmit}>
-				<div>
+				<div className={styles.add_to_cart__quantity}>
 					<label htmlFor='quantity'>Quantity: </label>
 					<input
 						type='number'
@@ -52,7 +54,11 @@ const AddToCart = () => {
 						name='quantity'
 						id='quantity'
 						required
+						min='1'
 					/>
+				</div>
+				<div className={styles.add_to_cart__platform}>
+					<label htmlFor='platform'>Platform: </label>
 					<select name='platform' ref={platformRef} id='platform'>
 						<option value='' defaultValue disabled>
 							Choose a Platform
@@ -60,12 +66,12 @@ const AddToCart = () => {
 						<option value='playstation'>Playstation</option>
 						<option value='pc'>PC</option>
 						<option value='xbox'>Xbox</option>
-						<option value='nSwitch'>Nintendo Switch</option>
+						<option value='nSwitch'>Switch</option>
 					</select>
 				</div>
-				<button>Add to Cart</button>
+				<button className={styles.add_to_cart__btn}>Add to Cart</button>
+				{status && <p className={statusClasses}>{status}</p>}
 			</form>
-			{status && <p>{status}</p>}
 		</>
 	);
 };

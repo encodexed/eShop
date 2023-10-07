@@ -13,15 +13,15 @@ const Info = ({ data }) => {
 				<p className={styles.info__description}>{description}</p>
 			</div>
 			<div className={styles.info__container__bottom}>
-				<div>
+				<div className={styles.info__game_info}>
 					<Heading text='Game Information' />
 					<GameData data={data} />
 				</div>
-				<div>
+				<div className={styles.info__remaining_stock}>
 					<Heading text='Remaining Stock' />
 					<Stock stock={stock} />
 				</div>
-				<div>
+				<div className={styles.info__add_to_cart}>
 					<Heading text='Add To Your Cart' />
 					<AddToCart />
 				</div>
