@@ -7,6 +7,7 @@ const GameData = ({ data }) => {
 	const { reviewScore, categories, stock, developer, publisher, rating } = data;
 
 	const categoriesStr = categories.join(", ");
+	const publisherStr = publisher.join(", ");
 	const platforms = getPlatforms(stock);
 
 	return (
@@ -24,7 +25,7 @@ const GameData = ({ data }) => {
 				<DataSlice listing='Developer' value={developer} />
 			</li>
 			<li>
-				<DataSlice listing='Publisher' value={publisher} />
+				<DataSlice listing='Publisher' value={publisherStr} />
 			</li>
 			<li>
 				<DataSlice listing='Rating' value={rating} />

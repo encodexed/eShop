@@ -113,7 +113,7 @@ export const consolidateCart = (cart) => {
 					nSwitch: item1.platform.nSwitch + item2.platform.nSwitch,
 				},
 			};
-			cartList.push(combinedItem);
+			cartList.splice(existingItemIndex, 1, combinedItem);
 		} else {
 			cartList.push(item);
 		}

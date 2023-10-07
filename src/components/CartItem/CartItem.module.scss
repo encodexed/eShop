@@ -1,0 +1,61 @@
+@use "../../styles/base.scss";
+
+.cart_item {
+	border-radius: 10px;
+	overflow: hidden;
+	height: 120px;
+	width: 100%;
+	display: flex;
+	background-color: black;
+
+	&__thumbnail {
+		&__container {
+			height: 100%;
+			width: 20%;
+		}
+
+		&__image {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__ware_details {
+		&__container {
+			height: 100%;
+			width: 30%;
+			display: flex;
+			flex-direction: column;
+			padding: 20px;
+		}
+
+		&__title {
+			font-size: 20px;
+			font-family: base.$heading-font;
+			margin: 0 0 5px 0;
+			padding: 0;
+		}
+	}
+
+	&__platform_data {
+		&__container {
+			height: 100%;
+			width: 25%;
+			display: flex;
+			flex-direction: column;
+			padding: 20px;
+		}
+	}
+
+	&__total_price {
+		&__container {
+			height: 100%;
+			width: 25%;
+			display: flex;
+			flex-direction: column;
+			padding: 20px;
+		}
+	}
+}

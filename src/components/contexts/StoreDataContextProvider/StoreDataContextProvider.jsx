@@ -17,8 +17,12 @@ const StoreDataContextProvider = ({ children }) => {
 		initialiseStoreData();
 	}, []);
 
+	const getStoreItemData = (id) => {
+		return storeData.find((item) => item.id === id);
+	};
+
 	return (
-		<StoreDataContext.Provider value={{ storeData }}>
+		<StoreDataContext.Provider value={{ storeData, getStoreItemData }}>
 			{children}
 		</StoreDataContext.Provider>
 	);

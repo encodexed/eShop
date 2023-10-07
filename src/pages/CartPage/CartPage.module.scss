@@ -19,6 +19,13 @@
 
 		&__inner {
 			padding: 0 20px;
+			width: 100%;
 		}
+	}
+
+	&__item_list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 	}
 }
