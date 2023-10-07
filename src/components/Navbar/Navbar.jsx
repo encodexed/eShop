@@ -1,7 +1,8 @@
 import styles from "./Navbar.module.scss";
 import logo from "../../assets/icon.png";
 import { NavLink } from "react-router-dom";
-import Cart from "../../assets/cart.svg";
+import CartIcon from "../CartIcon/CartIcon";
+// import Cart from "../../assets/cart.svg";
 
 const Navbar = () => {
 	return (
@@ -16,10 +17,7 @@ const Navbar = () => {
 					</NavLink>
 				</div>
 				<div className={styles.navbar__links}>
-					<NavLink className={styles.navbar__link} to='/cart'>
-						Cart
-						<img className={styles.cart} src={Cart} alt='Cart icon' />
-					</NavLink>
+					<CartIcon />
 				</div>
 			</div>
 		</nav>

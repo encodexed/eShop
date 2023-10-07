@@ -83,3 +83,12 @@ export const formatStockList = (stock) => {
 
 	return stockReadOut;
 };
+
+export const consolidateCartItems = (cart) => {
+	return cart.reduce((total, cartItem) => {
+		const itemCount = Object.values(cartItem.platform).reduce(
+			(total, next) => total + next
+		);
+		return total + itemCount;
+	}, 0);
+};
