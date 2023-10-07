@@ -3,14 +3,14 @@ import styles from "./CartIcon.module.scss";
 import Cart from "../../assets/cart.svg";
 import { CartContext } from "../contexts/CartContextProvider/CartContextProvider";
 import { useContext, useEffect, useState } from "react";
-import { consolidateCartItems } from "../../services/basic-services";
+import { getCartItemCount } from "../../services/basic-services";
 
 const CartIcon = () => {
 	const { cart } = useContext(CartContext);
 	const [cartItemCount, setCartItemCount] = useState(null);
 
 	useEffect(() => {
-		setCartItemCount(consolidateCartItems(cart));
+		setCartItemCount(getCartItemCount(cart));
 	}, [cart]);
 
 	let cartBadgeStyles = styles.cart__badge;

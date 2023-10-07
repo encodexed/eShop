@@ -1,0 +1,24 @@
+@use "../../styles/base.scss";
+
+.cart_page {
+	height: 100%;
+	width: 100%;
+	padding-top: 50px;
+
+	&__container {
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__content_wrapper {
+		max-width: base.$max-content-width;
+		width: 100%;
+		height: 100%;
+		display: flex;
+
+		&__inner {
+			padding: 0 20px;
+		}
+	}
+}

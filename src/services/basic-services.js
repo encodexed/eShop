@@ -84,11 +84,39 @@ export const formatStockList = (stock) => {
 	return stockReadOut;
 };
 
-export const consolidateCartItems = (cart) => {
+export const getCartItemCount = (cart) => {
 	return cart.reduce((total, cartItem) => {
 		const itemCount = Object.values(cartItem.platform).reduce(
 			(total, next) => total + next
 		);
 		return total + itemCount;
 	}, 0);
+};
+
+export const consolidateCart = (cart) => {
+	const cartList = [];
+	cart.map((item) => {
+		const { id } = item;
+		const existingItemIndex = cartList.findIndex(
+			(cartItem) => cartItem.id === id
+		);
+		if (existingItemIndex >= 0) {
+			const item1 = cartList[existingItemIndex];
+			const item2 = item;
+
+			const combinedItem = {
+				id,
+				platform: {
+					pc: item1.platform.pc + item2.platform.pc,
+					playstation: item1.platform.playstation + item2.platform.playstation,
+					xbox: item1.platform.xbox + item2.platform.xbox,
+					nSwitch: item1.platform.nSwitch + item2.platform.nSwitch,
+				},
+			};
+			cartList.push(combinedItem);
+		} else {
+			cartList.push(item);
+		}
+	});
+	return cartList;
 };
