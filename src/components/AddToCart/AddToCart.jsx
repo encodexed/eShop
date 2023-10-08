@@ -5,7 +5,7 @@ import { checkStock } from "../../services/fake-backend-services";
 import { getAvailablePlatforms } from "../../services/basic-services";
 import { useParams } from "react-router-dom";
 
-const AddToCart = ({ stock }) => {
+const AddToCart = ({ stock, price, discountFactor }) => {
 	const { addToCartState } = useContext(CartContext);
 	const quantityRef = useRef(null);
 	const platformRef = useRef(null);
@@ -21,6 +21,8 @@ const AddToCart = ({ stock }) => {
 		const quantity = parseInt(quantityRef.current.value);
 		const orderInfo = {
 			id,
+			price,
+			discountFactor,
 			platform: {
 				pc: 0,
 				playstation: 0,

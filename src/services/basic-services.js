@@ -109,7 +109,7 @@ export const getCartItemCount = (cart) => {
 export const consolidateCart = (cart) => {
 	const cartList = [];
 	cart.map((item) => {
-		const { id } = item;
+		const { id, price, discountFactor } = item;
 		const existingItemIndex = cartList.findIndex(
 			(cartItem) => cartItem.id === id
 		);
@@ -119,6 +119,8 @@ export const consolidateCart = (cart) => {
 
 			const combinedItem = {
 				id,
+				price,
+				discountFactor,
 				platform: {
 					pc: item1.platform.pc + item2.platform.pc,
 					playstation: item1.platform.playstation + item2.platform.playstation,
@@ -131,6 +133,7 @@ export const consolidateCart = (cart) => {
 			cartList.push(item);
 		}
 	});
+
 	return cartList;
 };
 
@@ -146,4 +149,17 @@ export const getAvailablePlatforms = (stock) => {
 			}
 		})
 		.filter((item) => item.length);
+};
+
+export const getCartTotalPrice = (cart) => {
+	return cart.reduce((total, next) => {
+		const items = Object.values(next.platform).reduce(
+			(totalItems, nextItems) => {
+				return totalItems + nextItems;
+			}
+		);
+		return (
+			total + parseFloat((items * next.discountFactor * next.price).toFixed(2))
+		);
+	}, 0);
 };

@@ -5,7 +5,7 @@ import Heading from "../Heading/Heading";
 import GameData from "../GameData/GameData";
 
 const Info = ({ data }) => {
-	const { description, stock } = data;
+	const { description, stock, price, discountFactor } = data;
 
 	return (
 		<div className={styles.info}>
@@ -23,7 +23,11 @@ const Info = ({ data }) => {
 				</div>
 				<div className={styles.info__add_to_cart}>
 					<Heading text='Add To Your Cart' />
-					<AddToCart stock={stock} />
+					<AddToCart
+						stock={stock}
+						price={price}
+						discountFactor={discountFactor}
+					/>
 				</div>
 			</div>
 		</div>
