@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { StoreDataContext } from "../contexts/StoreDataContextProvider/StoreDataContextProvider";
 import DataSlice from "../DataSlice/DataSlice";
 import PlatformOrderInfo from "../PlatformOrderInfo/PlatformOrderInfo";
+import CartItemPrice from "../CartItemPrice/CartItemPrice";
 
 const CartItem = ({ orderData }) => {
 	const [fullItemDetails, setFullItemDetails] = useState(null);
@@ -41,7 +42,13 @@ const CartItem = ({ orderData }) => {
 					discountFactor={fullItemDetails.discountFactor}
 				/>
 			</div>
-			<div className={styles.cart_item__total_price__container}>Blah</div>
+			<div className={styles.cart_item__total_price__container}>
+				<CartItemPrice
+					orderData={orderData}
+					price={fullItemDetails.price}
+					discountFactor={fullItemDetails.discountFactor}
+				/>
+			</div>
 		</div>
 	);
 };

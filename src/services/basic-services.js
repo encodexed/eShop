@@ -84,6 +84,19 @@ export const formatStockList = (stock) => {
 	return stockReadOut;
 };
 
+export const formatPrice = (price) => {
+	let formattedPrice = price.toString();
+	if (!price || !parseInt(formattedPrice)) {
+		formattedPrice = "Free";
+	} else if (formattedPrice.charAt(formattedPrice.length - 2) === ".") {
+		formattedPrice = "$" + formattedPrice + "0";
+	} else {
+		formattedPrice = "$" + formattedPrice;
+	}
+
+	return formattedPrice;
+};
+
 export const getCartItemCount = (cart) => {
 	return cart.reduce((total, cartItem) => {
 		const itemCount = Object.values(cartItem.platform).reduce(
