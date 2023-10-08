@@ -36,11 +36,7 @@ const CartItem = ({ orderData }) => {
 				<DataSlice listing='Publisher' value={publisherStr} />
 			</div>
 			<div className={styles.cart_item__platform_data__container}>
-				<PlatformOrderInfo
-					orderData={orderData.platform}
-					price={fullItemDetails.price}
-					discountFactor={fullItemDetails.discountFactor}
-				/>
+				<PlatformOrderInfo orderData={orderData.platform} />
 			</div>
 			<div className={styles.cart_item__total_price__container}>
 				<CartItemPrice

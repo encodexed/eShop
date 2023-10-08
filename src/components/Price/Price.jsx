@@ -2,9 +2,9 @@ import styles from "./Price.module.scss";
 
 const Price = ({ originalPrice, discountFactor }) => {
 	const displayDiscount = discountFactor !== 1;
-	const discountNum = Number.parseFloat(originalPrice * discountFactor)
-		.toFixed(2)
-		.toString();
+	const discountNum = Number.parseFloat(originalPrice * discountFactor).toFixed(
+		2
+	);
 
 	// Free game:
 	if (originalPrice === 0 || discountFactor === 0) {

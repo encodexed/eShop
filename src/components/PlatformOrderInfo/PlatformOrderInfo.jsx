@@ -1,10 +1,6 @@
 import DataSlice from "../DataSlice/DataSlice";
 
-const PlatformOrderInfo = ({ orderData, price, discountFactor }) => {
-	console.log("orderData", orderData);
-	console.log("price", price);
-	console.log("discountFactor", discountFactor);
-
+const PlatformOrderInfo = ({ orderData }) => {
 	return (
 		<>
 			{!!orderData.pc && (

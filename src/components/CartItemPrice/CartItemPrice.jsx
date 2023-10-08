@@ -5,14 +5,10 @@ const CartItemPrice = ({ orderData, price, discountFactor }) => {
 	const totalItems = getCartItemCount([orderData]);
 	const subtotal = price * totalItems;
 	const discountPercent = `${100 - discountFactor * 100}%`;
-	const totalPrice = (subtotal * discountFactor).toFixed(2).toString();
+	const totalPrice = (subtotal * discountFactor).toFixed(2);
 	const formattedPrice = formatPrice(price);
 	const formattedSubtotal = formatPrice(subtotal);
 	const formattedTotal = formatPrice(totalPrice);
-
-	if (!price) {
-		price = "Free";
-	}
 
 	return (
 		<div>
