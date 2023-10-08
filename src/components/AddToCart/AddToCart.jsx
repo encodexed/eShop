@@ -1,12 +1,14 @@
 import styles from "./AddToCart.module.scss";
 import { useRef, useContext, useState } from "react";
 import { CartContext } from "../contexts/CartContextProvider/CartContextProvider";
-import { checkStock } from "../../services/fake-backend-services";
+import { StoreDataContext } from "../contexts/StoreDataContextProvider/StoreDataContextProvider";
 import { getAvailablePlatforms } from "../../services/basic-services";
 import { useParams } from "react-router-dom";
+import { checkStockOfItem } from "../../services/data-services";
 
 const AddToCart = ({ stock, price, discountFactor }) => {
 	const { addToCartState } = useContext(CartContext);
+	const { storeData } = useContext(StoreDataContext);
 	const quantityRef = useRef(null);
 	const platformRef = useRef(null);
 	const formRef = useRef(null);
@@ -33,7 +35,7 @@ const AddToCart = ({ stock, price, discountFactor }) => {
 		orderInfo.platform[platform] = quantity;
 
 		// Check store data to make sure conditions are right
-		const isOrderValidated = await checkStock(orderInfo);
+		const isOrderValidated = checkStockOfItem(orderInfo, storeData);
 		if (isOrderValidated === "Added to Cart!") {
 			addToCartState(orderInfo);
 			formRef.current.reset();

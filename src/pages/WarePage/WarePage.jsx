@@ -1,27 +1,22 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getItemById } from "../../services/fake-backend-services";
 import styles from "./WarePage.module.scss";
 import Navbar from "../../components/Navbar/Navbar";
 import Heading from "../../components/Heading/Heading";
 import Gallery from "../../components/Gallery/Gallery";
 import Info from "../../components/Info/Info";
+import { getItemById } from "../../services/data-services";
+import { StoreDataContext } from "../../components/contexts/StoreDataContextProvider/StoreDataContextProvider";
 
 const WarePage = () => {
 	const { id } = useParams();
+	const { storeData } = useContext(StoreDataContext);
 	const [wareData, setWareData] = useState(null);
 
 	useEffect(() => {
-		const fetchData = async (itemID) => {
-			try {
-				const data = await getItemById(itemID);
-				setWareData(data);
-			} catch (e) {
-				console.error(e.message);
-			}
-		};
-		fetchData(id);
-	}, [id]);
+		const data = getItemById(id, storeData);
+		setWareData(data);
+	}, [id, storeData]);
 
 	if (!wareData) {
 		return (

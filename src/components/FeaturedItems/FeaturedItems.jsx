@@ -1,27 +1,25 @@
 import FeaturedItem from "../FeaturedItem/FeaturedItem";
-import { useEffect, useState } from "react";
-import { getFeaturedItems } from "../../services/fake-backend-services";
+import { useEffect, useState, useContext } from "react";
+import { StoreDataContext } from "../contexts/StoreDataContextProvider/StoreDataContextProvider";
+import { getFeaturedItems } from "../../services/data-services";
 
 const FeaturedItems = () => {
 	const [featuredItems, setFeaturedItems] = useState(null);
 	const [currentFeaturedItem, setCurrentFeaturedItem] = useState(null);
 	const [featuredItemIndex, setFeaturedItemIndex] = useState(null);
+	const { storeData } = useContext(StoreDataContext);
 
 	// Get featured items on mount
 	useEffect(() => {
+		if (!storeData) {
+			return;
+		}
 		const images = [];
-		const initialiseCarousel = async () => {
-			try {
-				const data = await getFeaturedItems();
-				setFeaturedItems(data);
-				setCurrentFeaturedItem(data[0]);
-				setFeaturedItemIndex(0);
-				data.forEach((item) => images.push(item.imageLinks[0]));
-			} catch (e) {
-				console.error(e.message);
-			}
-		};
-		initialiseCarousel();
+		const featuredItems = getFeaturedItems(storeData);
+		setFeaturedItems(featuredItems);
+		setCurrentFeaturedItem(featuredItems[0]);
+		setFeaturedItemIndex(0);
+		featuredItems.forEach((item) => images.push(item.imageLinks[0]));
 
 		// Preload images (remember to turn on the cache when using the dev tools of your browser)
 		const preLoadImages = async (imgLinks) => {
@@ -31,7 +29,7 @@ const FeaturedItems = () => {
 			}
 		};
 		preLoadImages(images);
-	}, []);
+	}, [storeData]);
 
 	// Cycle through featured items automatically
 	useEffect(() => {

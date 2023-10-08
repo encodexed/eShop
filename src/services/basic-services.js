@@ -139,7 +139,8 @@ export const consolidateCart = (cart) => {
 
 export const getAvailablePlatforms = (stock) => {
 	const availablePlatforms = Object.entries(stock);
-	const platformDisplayNames = ["PC", "Playstation", "Switch", "Xbox"];
+	console.log(availablePlatforms);
+	const platformDisplayNames = ["PC", "Xbox", "Playstation", "Switch"];
 	return availablePlatforms
 		.map((platform, index) => {
 			if (platform[1] > 0) {
