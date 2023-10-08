@@ -138,18 +138,18 @@ export const consolidateCart = (cart) => {
 };
 
 export const getAvailablePlatforms = (stock) => {
-	const availablePlatforms = Object.entries(stock);
-	console.log(availablePlatforms);
-	const platformDisplayNames = ["PC", "Xbox", "Playstation", "Switch"];
-	return availablePlatforms
-		.map((platform, index) => {
-			if (platform[1] > 0) {
-				return [platform[0], platformDisplayNames[index]];
-			} else {
-				return [];
-			}
-		})
-		.filter((item) => item.length);
+	const displayNames = {
+		xbox: "Xbox",
+		playstation: "Playstation",
+		pc: "PC",
+		nSwitch: "Switch",
+	};
+
+	return Object.entries(stock).map((platform) => {
+		if (platform[1] > 0) {
+			return [platform[0], displayNames[platform[0]]];
+		}
+	});
 };
 
 export const getCartTotalPrice = (cart) => {
