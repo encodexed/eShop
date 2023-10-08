@@ -23,7 +23,7 @@ const Info = ({ data }) => {
 				</div>
 				<div className={styles.info__add_to_cart}>
 					<Heading text='Add To Your Cart' />
-					<AddToCart />
+					<AddToCart stock={stock} />
 				</div>
 			</div>
 		</div>

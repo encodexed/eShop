@@ -120,3 +120,17 @@ export const consolidateCart = (cart) => {
 	});
 	return cartList;
 };
+
+export const getAvailablePlatforms = (stock) => {
+	const availablePlatforms = Object.entries(stock);
+	const platformDisplayNames = ["PC", "Playstation", "Switch", "Xbox"];
+	return availablePlatforms
+		.map((platform, index) => {
+			if (platform[1] > 0) {
+				return [platform[0], platformDisplayNames[index]];
+			} else {
+				return [];
+			}
+		})
+		.filter((item) => item.length);
+};

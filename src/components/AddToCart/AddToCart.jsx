@@ -2,15 +2,17 @@ import styles from "./AddToCart.module.scss";
 import { useRef, useContext, useState } from "react";
 import { CartContext } from "../contexts/CartContextProvider/CartContextProvider";
 import { checkStock } from "../../services/fake-backend-services";
+import { getAvailablePlatforms } from "../../services/basic-services";
 import { useParams } from "react-router-dom";
 
-const AddToCart = () => {
+const AddToCart = ({ stock }) => {
 	const { addToCartState } = useContext(CartContext);
 	const quantityRef = useRef(null);
 	const platformRef = useRef(null);
 	const formRef = useRef(null);
 	const { id } = useParams();
 	const [status, setStatus] = useState(null);
+	const selectablePlatforms = getAvailablePlatforms(stock);
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
@@ -65,10 +67,18 @@ const AddToCart = () => {
 						<option value='' defaultValue disabled>
 							Choose a Platform
 						</option>
-						<option value='playstation'>Playstation</option>
-						<option value='pc'>PC</option>
-						<option value='xbox'>Xbox</option>
-						<option value='nSwitch'>Switch</option>
+						{selectablePlatforms &&
+							selectablePlatforms.map((platformItem, index) => {
+								if (platformItem) {
+									return (
+										<option key={`plat-${index}`} value={platformItem[0]}>
+											{platformItem[1]}
+										</option>
+									);
+								} else {
+									return <></>;
+								}
+							})}
 					</select>
 				</div>
 				<button className={styles.add_to_cart__btn}>Add to Cart</button>
