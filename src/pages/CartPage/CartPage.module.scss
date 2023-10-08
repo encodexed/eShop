@@ -23,9 +23,24 @@
 		}
 	}
 
+	&__heading {
+		display: flex;
+		justify-content: center;
+	}
+
 	&__item_list {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
+	}
+
+	&__total {
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__empty_cart {
+		text-align: center;
 	}
 }

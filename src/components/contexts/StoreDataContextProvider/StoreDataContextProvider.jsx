@@ -21,8 +21,17 @@ const StoreDataContextProvider = ({ children }) => {
 		return storeData.find((item) => item.id === id);
 	};
 
+	const checkoutOfStore = (cart) => {
+		// checkStock();
+		// updateStockDatabase();
+		// updateWebsiteStock();
+		// emptyCart();
+	};
+
 	return (
-		<StoreDataContext.Provider value={{ storeData, getStoreItemData }}>
+		<StoreDataContext.Provider
+			value={{ storeData, getStoreItemData, checkoutOfStore }}
+		>
 			{children}
 		</StoreDataContext.Provider>
 	);
