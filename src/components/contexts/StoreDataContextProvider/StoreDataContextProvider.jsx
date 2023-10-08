@@ -1,5 +1,5 @@
 import { useState, useEffect, createContext } from "react";
-import { getAllItems } from "../../../services/fake-backend-services";
+import { getAllItems } from "../../../services/firestore-services";
 export const StoreDataContext = createContext(null);
 
 const StoreDataContextProvider = ({ children }) => {
@@ -26,6 +26,7 @@ const StoreDataContextProvider = ({ children }) => {
 		// updateStockDatabase();
 		// updateWebsiteStock();
 		// emptyCart();
+		console.log(cart);
 	};
 
 	return (
