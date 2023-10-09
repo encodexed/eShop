@@ -8,13 +8,11 @@ export const getAllItems = async () => {
 	// snapshot.docs.forEach((doc) => console.log(doc.id, doc.data()));
 	// Should log a QuerySnapshot with your data plus metadata
 	const documents = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-	console.log(documents);
 	// This will give us an array that is useful to us to be worked with
 	return documents;
 };
 
 export const updateFirestoreStock = async (updates) => {
-	console.log("updating firestore with these new items", updates);
 	// Create an empty transaction for your updates
 	const batch = writeBatch(db);
 

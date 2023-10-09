@@ -14,11 +14,14 @@ const WarePage = () => {
 	const [wareData, setWareData] = useState(null);
 
 	useEffect(() => {
+		if (!storeData) {
+			return;
+		}
 		const data = getItemById(id, storeData);
 		setWareData(data);
 	}, [id, storeData]);
 
-	if (!wareData) {
+	if (!wareData || !storeData) {
 		return (
 			<div className={styles.ware_page}>
 				<Navbar />
