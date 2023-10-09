@@ -39,13 +39,7 @@ const StoreDataContextProvider = ({ children }) => {
 	};
 
 	const checkoutOfStore = (cart) => {
-		try {
-			checkStockOfAllItems(cart, storeData);
-		} catch (e) {
-			console.error(e.message);
-			return;
-		}
-
+		checkStockOfAllItems(cart, storeData);
 		const newStoreData = createUpdatedStoreDataObject(cart, storeData);
 		setStoreData(newStoreData.storeData);
 		updateFirestoreStock(newStoreData.firestoreUpdates);

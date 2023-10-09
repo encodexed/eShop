@@ -5,6 +5,12 @@
 	background-color: base.$palette7;
 	padding: 20px;
 
+	&__container {
+		display: flex;
+		flex-direction: column;
+		width: 200px;
+	}
+
 	& > div {
 		padding: 5px;
 	}
@@ -31,5 +37,11 @@
 			display: flex;
 			justify-content: center;
 		}
+	}
+
+	&__error {
+		margin-top: 20px;
+		color: red;
+		text-align: center;
 	}
 }
