@@ -3,11 +3,9 @@ import styles from "./Button.module.scss";
 
 const Button = ({ route, text }) => {
 	return (
-		<button className={styles.button}>
-			<NavLink className={styles.button__link} to={route}>
-				{text}
-			</NavLink>
-		</button>
+		<NavLink className={styles.button__link} to={route}>
+			<button className={styles.button}>{text}</button>
+		</NavLink>
 	);
 };
 

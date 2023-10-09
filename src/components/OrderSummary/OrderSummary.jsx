@@ -21,7 +21,7 @@ const OrderSummary = () => {
 		try {
 			checkoutOfStore(cart);
 			setError(null);
-			navigator("/wares/");
+			navigator("/success");
 		} catch (e) {
 			setError(e.message);
 		}

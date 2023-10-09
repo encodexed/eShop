@@ -4,6 +4,7 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 import WaresPage from "./pages/WaresPage/WaresPage";
 import CartPage from "./pages/CartPage/CartPage";
 import WarePage from "./pages/WarePage/WarePage";
+import SuccessPage from "./pages/SuccessPage/SuccessPage";
 
 const AppRoutes = () => {
 	return (
@@ -13,6 +14,7 @@ const AppRoutes = () => {
 				<Route path='/' element={<LandingPage />} />
 				<Route path='/wares' element={<WaresPage />} />
 				<Route path='/cart' element={<CartPage />} />
+				<Route path='/success/' element={<SuccessPage />} />
 				<Route path='/wares/:id/:slug' element={<WarePage />} />
 			</Routes>
 		</BrowserRouter>
