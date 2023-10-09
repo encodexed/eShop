@@ -21,6 +21,24 @@ const CartContextProvider = ({ children }) => {
 		});
 	};
 
+	const deleteFromCartState = (id) => {
+		setCart((prevState) => {
+			return prevState.filter((item) => item.id !== id);
+		});
+	};
+
+	const adjustItemCountInCart = (id, platform, adjustmentType) => {
+		const newCart = [...cart];
+		const foundItem = newCart.find((item) => item.id === id);
+		if (adjustmentType === "increment") {
+			foundItem.platform[platform]++;
+		} else {
+			foundItem.platform[platform]--;
+		}
+
+		setCart(newCart);
+	};
+
 	const emptyCart = () => {
 		setCart([]);
 	};
@@ -32,7 +50,15 @@ const CartContextProvider = ({ children }) => {
 
 	return (
 		<CartContext.Provider
-			value={{ cart, emptyCart, addToCartState, cartTotalPrice, cartItemCount }}
+			value={{
+				cart,
+				emptyCart,
+				addToCartState,
+				deleteFromCartState,
+				adjustItemCountInCart,
+				cartTotalPrice,
+				cartItemCount,
+			}}
 		>
 			{children}
 		</CartContext.Provider>

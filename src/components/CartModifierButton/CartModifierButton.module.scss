@@ -1,0 +1,27 @@
+.cart_btn {
+	padding: 3px 8px;
+	max-width: 25px;
+	max-height: 25px;
+	border-radius: 5px;
+	border: 1px solid transparent;
+	color: white;
+	cursor: pointer;
+
+	&_decrement {
+		@extend .cart_btn;
+		background-color: #b70000;
+
+		&:hover {
+			background-color: #ff0000;
+		}
+	}
+
+	&_increment {
+		@extend .cart_btn;
+		background-color: #00b400;
+
+		&:hover {
+			background-color: #00d900;
+		}
+	}
+}

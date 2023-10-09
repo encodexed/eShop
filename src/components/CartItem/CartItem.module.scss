@@ -3,7 +3,7 @@
 .cart_item {
 	border-radius: 10px;
 	overflow: hidden;
-	height: 140px;
+	height: 160px;
 	width: 100%;
 	display: flex;
 	background-color: black;
@@ -25,24 +25,30 @@
 	&__ware_details {
 		&__container {
 			height: 100%;
-			width: 40%;
+			width: 30%;
 			display: flex;
 			flex-direction: column;
 			padding: 20px;
 		}
 
 		&__title {
-			font-size: 20px;
+			font-size: 24px;
 			font-family: base.$heading-font;
 			margin: 0 0 5px 0;
 			padding: 0;
+
+			&__container {
+				display: flex;
+				gap: 5px;
+			}
 		}
 	}
 
 	&__platform_data {
 		&__container {
 			height: 100%;
-			width: 20%;
+			min-width: 16%;
+			max-width: 25%;
 			display: flex;
 			flex-direction: column;
 			padding: 20px;
@@ -52,7 +58,9 @@
 	&__total_price {
 		&__container {
 			height: 100%;
-			width: 15%;
+			margin-left: auto;
+			width: fit-content;
+			max-width: 15%;
 			display: flex;
 			flex-direction: column;
 			padding: 20px;

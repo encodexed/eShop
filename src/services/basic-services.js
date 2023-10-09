@@ -85,9 +85,11 @@ export const formatStockList = (stock) => {
 };
 
 export const formatPrice = (price) => {
-	let formattedPrice = price.toString();
+	const numberPrice = Number(price);
+	const approximatePrice = Number(numberPrice.toFixed(2));
+	let formattedPrice = approximatePrice.toString();
 	if (!price || !parseInt(formattedPrice)) {
-		formattedPrice = "Free";
+		formattedPrice = "$0.00";
 	} else if (formattedPrice.charAt(formattedPrice.length - 2) === ".") {
 		formattedPrice = "$" + formattedPrice + "0";
 	} else {
