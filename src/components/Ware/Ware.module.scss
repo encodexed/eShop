@@ -1,3 +1,5 @@
+@use "../../styles/breakpoints.scss";
+
 .ware {
 	&__container {
 		width: 45%;
@@ -9,6 +11,11 @@
 		overflow: hidden;
 		border: 2px solid transparent;
 		transition: 0.3s border, 0.3s box-shadow;
+
+		@include breakpoints.s {
+			width: 100%;
+			margin: 20px 0;
+		}
 
 		&:hover {
 			border: 2px solid #dedede;
