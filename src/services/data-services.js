@@ -44,7 +44,7 @@ export const checkStockOfAllItems = (cart, storeData) => {
 };
 
 export const createUpdatedStoreDataObject = (cart, storeData) => {
-	cart.forEach((cartItem) => {
+	const firestoreUpdates = cart.map((cartItem) => {
 		const { id } = cartItem;
 		const storeItem = storeData.find((item) => item.id === id);
 
@@ -52,7 +52,12 @@ export const createUpdatedStoreDataObject = (cart, storeData) => {
 		storeItem.stock.pc -= cartItem.platform.pc;
 		storeItem.stock.xbox -= cartItem.platform.xbox;
 		storeItem.stock.nSwitch -= cartItem.platform.nSwitch;
+
+		return storeItem;
 	});
 
-	return storeData;
+	return {
+		storeData,
+		firestoreUpdates,
+	};
 };
