@@ -2,7 +2,6 @@ import styles from "./Navbar.module.scss";
 import logo from "../../assets/icon.png";
 import { NavLink } from "react-router-dom";
 import CartIcon from "../CartIcon/CartIcon";
-// import Cart from "../../assets/cart.svg";
 
 const Navbar = () => {
 	return (

@@ -1,4 +1,5 @@
 @use "../../styles/base.scss";
+@use "../../styles/breakpoints.scss";
 
 .navbar {
 	position: fixed;
@@ -43,6 +44,10 @@
 		font-size: 22px;
 		text-wrap: nowrap;
 		overflow: hidden;
+
+		@include breakpoints.xxs {
+			display: none;
+		}
 	}
 
 	&__links {
