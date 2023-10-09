@@ -7,11 +7,11 @@ import AppRoutes from "./AppRoutes";
 const App = () => {
 	return (
 		<div className={styles.app}>
-			<StoreDataContextProvider>
-				<CartContextProvider>
+			<CartContextProvider>
+				<StoreDataContextProvider>
 					<AppRoutes />
-				</CartContextProvider>
-			</StoreDataContextProvider>
+				</StoreDataContextProvider>
+			</CartContextProvider>
 		</div>
 	);
 };

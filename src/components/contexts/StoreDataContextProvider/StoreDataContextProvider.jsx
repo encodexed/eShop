@@ -1,9 +1,15 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect, createContext, useContext } from "react";
 import { getAllItems } from "../../../services/firestore-services";
+import {
+	checkStockOfAllItems,
+	createUpdatedStoreDataObject,
+} from "../../../services/data-services";
+import { CartContext } from "../CartContextProvider/CartContextProvider";
 export const StoreDataContext = createContext(null);
 
 const StoreDataContextProvider = ({ children }) => {
 	const [storeData, setStoreData] = useState(null);
+	const { emptyCart } = useContext(CartContext);
 
 	useEffect(() => {
 		const initialiseStoreData = async () => {
@@ -22,11 +28,16 @@ const StoreDataContextProvider = ({ children }) => {
 	};
 
 	const checkoutOfStore = (cart) => {
-		// checkStock();
-		// updateStockDatabase();
-		// updateWebsiteStock();
-		// emptyCart();
-		console.log(cart);
+		try {
+			checkStockOfAllItems(cart, storeData);
+		} catch (e) {
+			console.error(e.message);
+			return;
+		}
+
+		const newStoreData = createUpdatedStoreDataObject(cart, storeData);
+		setStoreData(newStoreData);
+		emptyCart();
 	};
 
 	return (

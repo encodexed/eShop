@@ -9,7 +9,6 @@ export const getFeaturedItems = (data) => {
 export const checkStockOfItem = (orderInfo, storeData) => {
 	const { id } = orderInfo;
 	const data = storeData.find((item) => item.id === id);
-	console.log("found item: ", data);
 
 	const orderPlatformEntries = Object.entries(orderInfo.platform);
 	const orderedPlatformInfo = orderPlatformEntries.find(
@@ -30,4 +29,30 @@ export const checkStockOfItem = (orderInfo, storeData) => {
 	}
 
 	return "Added to Cart!";
+};
+
+export const checkStockOfAllItems = (cart, storeData) => {
+	cart.forEach((cartItem) => {
+		const good = checkStockOfItem(cartItem, storeData);
+		if (good === "Added to Cart!") {
+			return;
+		} else {
+			throw new Error(good);
+		}
+	});
+	return;
+};
+
+export const createUpdatedStoreDataObject = (cart, storeData) => {
+	cart.forEach((cartItem) => {
+		const { id } = cartItem;
+		const storeItem = storeData.find((item) => item.id === id);
+
+		storeItem.stock.playstation -= cartItem.platform.playstation;
+		storeItem.stock.pc -= cartItem.platform.pc;
+		storeItem.stock.xbox -= cartItem.platform.xbox;
+		storeItem.stock.nSwitch -= cartItem.platform.nSwitch;
+	});
+
+	return storeData;
 };

@@ -21,6 +21,10 @@ const CartContextProvider = ({ children }) => {
 		});
 	};
 
+	const emptyCart = () => {
+		setCart([]);
+	};
+
 	useEffect(() => {
 		setCartTotalPrice(getCartTotalPrice(cart));
 		setCartItemCount(getCartItemCount(cart));
@@ -28,7 +32,7 @@ const CartContextProvider = ({ children }) => {
 
 	return (
 		<CartContext.Provider
-			value={{ cart, addToCartState, cartTotalPrice, cartItemCount }}
+			value={{ cart, emptyCart, addToCartState, cartTotalPrice, cartItemCount }}
 		>
 			{children}
 		</CartContext.Provider>

@@ -14,11 +14,6 @@ const OrderSummary = () => {
 	const subtotal = formatPrice(cartTotalPrice);
 	const formattedPrice = formatPrice(cartTotalPrice + shipping);
 
-	const handleOrderSubmission = () => {
-		console.log('Attempting to "buy" items');
-		// checkoutOfStore(cart);
-	};
-
 	return (
 		<div className={styles.order_summary}>
 			<Heading text='Order Summary' />
@@ -33,7 +28,7 @@ const OrderSummary = () => {
 			<div className={styles.order_summary__btn__container}>
 				<button
 					className={styles.order_summary__btn}
-					onClick={handleOrderSubmission}
+					onClick={() => checkoutOfStore(cart)}
 				>
 					Submit Order
 				</button>

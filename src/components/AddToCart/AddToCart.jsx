@@ -79,8 +79,6 @@ const AddToCart = ({ stock, price, discountFactor }) => {
 											{platformItem[1]}
 										</option>
 									);
-								} else {
-									return <></>;
 								}
 							})}
 					</select>
