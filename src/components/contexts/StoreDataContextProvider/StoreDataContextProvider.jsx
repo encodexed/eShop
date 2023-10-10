@@ -1,6 +1,7 @@
 import { useState, useEffect, createContext, useContext } from "react";
 import {
 	getAllItems,
+	// resetDatabase,
 	updateFirestoreStock,
 } from "../../../services/firestore-services";
 import {
@@ -25,6 +26,7 @@ const StoreDataContextProvider = ({ children }) => {
 	useEffect(() => {
 		const initialiseStoreData = async () => {
 			try {
+				// await resetDatabase();
 				const data = await getAllItems();
 				setStoreData(data);
 			} catch (e) {
