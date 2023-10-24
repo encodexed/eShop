@@ -1,0 +1,44 @@
+@use "../../styles/base.scss";
+
+.quality {
+	color: base.$key-color;
+}
+
+.review_score {
+	font-size: 14px;
+}
+
+.legendary {
+	@extend .review_score;
+	color: gold;
+}
+
+.epic {
+	@extend .review_score;
+	color: #f700ff;
+}
+
+.rare {
+	@extend .review_score;
+	color: #3377ff;
+}
+
+.uncommon {
+	@extend .review_score;
+	color: #00ff40;
+}
+
+.common {
+	@extend .review_score;
+	color: #dedede;
+}
+
+.low {
+	@extend .review_score;
+	color: #808080;
+}
+
+.junk {
+	@extend .review_score;
+	color: #c90000;
+}

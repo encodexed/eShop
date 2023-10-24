@@ -1,5 +1,4 @@
 // Palette
-
 $palette1: #f2d194;
 $palette2: #f2ceae;
 $palette3: #d989a6;
@@ -10,10 +9,11 @@ $palette7: #024873;
 $palette8: #83618c;
 $palette9: #2f3240;
 
-// Theme
+$key-color: #717171;
 
-$light-mode-text-colour: #2f3240;
-$light-mode-background-colour: #f2ceae;
+$background-colour: #2f3240;
 
-$dark-mode-text-colour: #f2ceae;
-$dark-mode-background-colour2: #2f3240;
+$heading-font: "Macondo", cursive;
+$body-font: "Fira Sans", sans-serif;
+
+$max-content-width: 1200px;

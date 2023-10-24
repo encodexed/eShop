@@ -1,0 +1,79 @@
+@use "../../styles/base.scss";
+@use "../../styles/breakpoints.scss";
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 100%;
+	z-index: 2;
+	background-color: base.$palette7;
+	font-family: base.$heading-font;
+	border-bottom: 2px solid black;
+	display: flex;
+	justify-content: center;
+
+	&__content_wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		max-width: base.$max-content-width;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		&__link {
+			display: flex;
+			gap: 20px;
+			align-items: center;
+			margin-left: 20px;
+			color: white;
+			text-decoration: none;
+			height: 100%;
+
+			& img {
+				height: 80%;
+				width: auto;
+			}
+		}
+	}
+
+	&__brand_text {
+		font-size: 22px;
+		text-wrap: nowrap;
+		overflow: hidden;
+
+		@include breakpoints.xxs {
+			display: none;
+		}
+	}
+
+	&__links {
+		margin-right: 20px;
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+		color: white;
+		text-decoration: none;
+
+		&:hover {
+			color: gold;
+			text-decoration: underline;
+		}
+	}
+}
+
+.cart {
+	width: 20px;
+	height: 20px;
+}

@@ -1,0 +1,40 @@
+@use "../../styles/base.scss";
+
+.cart {
+	&__icon {
+		width: 20px;
+		height: 20px;
+	}
+
+	&__badge {
+		background-color: red;
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		border-radius: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: base.$body-font;
+		font-size: 12px;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+		color: white;
+		text-decoration: none;
+		margin-right: 20px;
+
+		&__text:hover {
+			color: gold;
+			text-decoration: underline;
+		}
+	}
+}
+
+.hidden {
+	display: none;
+}

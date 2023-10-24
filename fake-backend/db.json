@@ -1,0 +1,172 @@
+{
+	"stock": [
+		{
+			"id": "gYRzUKquHPmalaYFPPwu",
+			"categories": ["RPG", "Space", "Open World", "Sci-fi", "Singleplayer"],
+			"description": "Starfield is the first new universe in 25 years from Bethesda Game Studios, the award-winning creators of The Elder Scrolls V: Skyrim and Fallout 4.",
+			"developer": "Bethesda Game Studios",
+			"discountFactor": 0.85,
+			"featured": true,
+			"imageLinks": [
+				"https://ea6kwt57nbj.exactdn.com/wp-content/uploads/2023/07/Starfield-Featured-Ecran-Partage.jpg",
+				"https://cdn.cloudflare.steamstatic.com/steam/apps/1716740/ss_4887dc140a637684ddcfca518458668409f946dc.600x338.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1716740/ss_b2821283cb140cd5a6289a8160016b6a60d8f96e.600x338.jpg"
+			],
+			"price": 119.95,
+			"publisher": ["Bethesda Softworks"],
+			"rating": "Mature",
+			"reviewScore": 75,
+			"stock": {
+				"pc": 15,
+				"playstation": -1,
+				"nSwitch": -1,
+				"xbox": 10
+			},
+			"title": "Starfield"
+		},
+		{
+			"id": "kY5rcpw2MoPyrttZG3OD",
+			"categories": ["Souls-like", "Dark Fantasy", "RPG", "Open World"],
+			"description": "THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+			"developer": "FromSoftware Inc.",
+			"discountFactor": 0.9,
+			"featured": true,
+			"imageLinks": [
+				"https://www.journaldugeek.com/content/uploads/2021/10/template-jdg-2021-10-18t165104-139.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_ae44317e3bd07b7690b4d62cc5d0d1df30367a91.600x338.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1245620/ss_b70e156adf9e40aed24c10fb352b7813586e7290.600x338.jpg"
+			],
+			"price": 89.95,
+			"publisher": ["FromSoftware Inc.", "Bandai Namco Entertainment"],
+			"rating": "Mature",
+			"reviewScore": 93,
+			"stock": {
+				"pc": 20,
+				"playstation": 15,
+				"nSwitch": -1,
+				"xbox": 15
+			},
+			"title": "Elden Ring"
+		},
+		{
+			"id": "3",
+			"categories": ["RPG", "Choices Matter", "Story Rich", "Adventure"],
+			"description": "Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons & Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
+			"developer": "Larian Studios",
+			"discountFactor": 1,
+			"featured": false,
+			"imageLinks": [
+				"https://miro.medium.com/v2/resize:fit:1200/0*0bukiqD7QkSm1La_",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1086940/ss_cf936d31061b58e98e0c646aee00e6030c410cda.600x338.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1086940/ss_0efa1a469a37beeb4fd0cb8e16dc99bd36357dc4.600x338.jpg"
+			],
+			"price": 89.95,
+			"publisher": ["Larian Studios"],
+			"rating": "18+",
+			"reviewScore": 96,
+			"stock": {
+				"pc": 5,
+				"playstation": 10,
+				"nSwitch": -1,
+				"xbox": -1
+			},
+			"title": "Baldur's Gate 3"
+		},
+		{
+			"id": "4",
+			"categories": ["Action", "Adventure"],
+			"description": "Explore a mysterious new world either solo or with a friend, discover new Copy Abilities and battle a bevy of beasts in Kirby and the Forgotten Land on Nintendo Switch!",
+			"developer": "HAL Laboratory",
+			"discountFactor": 0.92,
+			"featured": true,
+			"imageLinks": [
+				"https://img-eshop.cdn.nintendo.net/i/6290742634179fa1d0059d758cb22b81f27e8014d78abed51cb9eb07cead99b5.jpg",
+				"https://assets.nintendo.eu/image/upload/c_scale,f_auto,q_auto/v1646612493/KirbyAndTheForgottenLand_CopyPaste_Scr_02.jpg",
+				"https://www.denofgeek.com/wp-content/uploads/2022/03/Kirby-and-the-Fogotten-Lands.jpg"
+			],
+			"price": 69,
+			"publisher": ["Nintendo"],
+			"rating": "Mature",
+			"reviewScore": 95,
+			"stock": {
+				"pc": -1,
+				"playstation": -1,
+				"nSwitch": 25,
+				"xbox": -1
+			},
+			"title": "Kirby and the Forgotten Land"
+		},
+		{
+			"id": "5",
+			"categories": ["Space", "Automation", "Base Building", "Open World"],
+			"description": "Build the most efficient intergalactic factory in space simulation strategy game Dyson Sphere Program! Harness the power of stars, collect resources, plan and design production lines and develop your interstellar factory from a small space workshop to a galaxy-wide industrial empire.",
+			"developer": "Youthcat Studio",
+			"discountFactor": 1,
+			"featured": false,
+			"imageLinks": [
+				"https://news.xbox.com/en-us/wp-content/uploads/sites/2/2022/10/Key-Art-1920x1080_en-dd3eccb23c290f6bb38d.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1366540/ss_475933730894ab89e3a8b961f8fc18399ee2a1df.600x338.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1366540/ss_1f699b2ba7ce5025064050cf5498f6a576b89d31.600x338.jpg"
+			],
+			"price": 28.95,
+			"publisher": ["Gamera Games"],
+			"rating": "Parental Guidance",
+			"reviewScore": 97,
+			"stock": {
+				"pc": 20,
+				"playstation": -1,
+				"nSwitch": -1,
+				"xbox": -1
+			},
+			"title": "Dyson Sphere Program"
+		},
+		{
+			"id": "6",
+			"categories": ["FPS", "Shooter", "Multiplayer", "Competitive", "Action"],
+			"description": "For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.",
+			"developer": "Valve",
+			"discountFactor": 1,
+			"featured": false,
+			"imageLinks": [
+				"https://sm.ign.com/ign_in/screenshot/default/mg-35_u958.png",
+				"https://cdn.akamai.steamstatic.com/steam/apps/730/ss_ef82850f036dac5772cb07dbc2d1116ea13eb163.600x338.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/730/ss_d830cfd0550fbb64d80e803e93c929c3abb02056.600x338.jpg"
+			],
+			"price": 0,
+			"publisher": ["Valve"],
+			"rating": "Mature",
+			"reviewScore": 73,
+			"stock": {
+				"pc": 20,
+				"playstation": -1,
+				"nSwitch": -1,
+				"xbox": -1
+			},
+			"title": "Counter-Strike 2"
+		},
+		{
+			"id": "7",
+			"categories": ["Superhero", "Open World", "Action", "Singleplayer"],
+			"description": "In Marvel’s Spider-Man Remastered, the worlds of Peter Parker and Spider-Man collide in an original action-packed story. Play as an experienced Peter Parker, fighting big crime and iconic villains in Marvel’s New York. Web-swing through vibrant neighborhoods and defeat villains with epic takedowns.",
+			"developer": "Insomniac Games",
+			"discountFactor": 1,
+			"featured": false,
+			"imageLinks": [
+				"https://images.pushsquare.com/39b50ce3f30ad/1280x720.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_ad14a7daa190cb150fbb070afc70bc64d66a5e2e.600x338.jpg",
+				"https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_7c2b250a3dfcf7a48b61e6b911894be1d78be8ec.600x338.jpg"
+			],
+			"price": 94.95,
+			"publisher": ["Playstation PC LLC"],
+			"rating": "Mature",
+			"reviewScore": 94,
+			"stock": {
+				"pc": 5,
+				"playstation": 10,
+				"nSwitch": -1,
+				"xbox": -1
+			},
+			"title": "Marvel's Spider-Man Remastered"
+		}
+	]
+}

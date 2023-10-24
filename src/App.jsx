@@ -1,21 +1,18 @@
 import "./Normalise.css";
 import styles from "./App.module.scss";
-import BackgroundWrapper from "./components/BackgroundWrapper/BackgroundWrapper";
-import DarkModeContextProvider from "./components/contexts/DarkModeContextProvider/DarkModeContextProvider";
-import DarkToggle from "./components/DarkToggle/DarkToggle";
+import StoreDataContextProvider from "./components/contexts/StoreDataContextProvider/StoreDataContextProvider";
+import CartContextProvider from "./components/contexts/CartContextProvider/CartContextProvider";
+import AppRoutes from "./AppRoutes";
 
 const App = () => {
 	return (
-		<>
-			<DarkModeContextProvider>
-				<BackgroundWrapper>
-					<div className={styles.app}>
-						<DarkToggle />
-						<p>Here is a test paragraph</p>
-					</div>
-				</BackgroundWrapper>
-			</DarkModeContextProvider>
-		</>
+		<div className={styles.app}>
+			<CartContextProvider>
+				<StoreDataContextProvider>
+					<AppRoutes />
+				</StoreDataContextProvider>
+			</CartContextProvider>
+		</div>
 	);
 };
 

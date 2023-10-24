@@ -1,0 +1,10 @@
+.game_data {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	@media screen and (max-width: 668px) {
+		text-align: center;
+		width: 100%;
+	}
+}

@@ -1,0 +1,47 @@
+@use "../../styles/base.scss";
+
+.order_summary {
+	border-radius: 10px;
+	background-color: base.$palette7;
+	padding: 20px;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		width: 200px;
+	}
+
+	& > div {
+		padding: 5px;
+	}
+
+	&__subtotal {
+		border-bottom: 1px solid grey;
+	}
+
+	&__btn {
+		font-size: 14px;
+		padding: 3px;
+		border-radius: 5px;
+		border: 1px solid transparent;
+		max-height: 25px;
+		background-color: #00b400;
+		color: white;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #00d900;
+		}
+
+		&__container {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__error {
+		margin-top: 20px;
+		color: red;
+		text-align: center;
+	}
+}

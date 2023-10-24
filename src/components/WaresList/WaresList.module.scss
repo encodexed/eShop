@@ -1,0 +1,12 @@
+@use "../../styles/breakpoints.scss";
+
+.wares_list {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	@media screen and (max-width: 920px) {
+		flex-direction: column;
+	}
+}

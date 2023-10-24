@@ -1,0 +1,81 @@
+@use "../../styles/breakpoints.scss";
+
+.gallery {
+	height: 450px;
+	margin-top: 20px;
+	display: flex;
+	border: 2px solid black;
+	background-color: black;
+
+	@include breakpoints.s {
+		flex-direction: column;
+		max-width: 100%;
+	}
+
+	&__displayed_image {
+		width: 75%;
+		height: 100%;
+
+		@include breakpoints.s {
+			width: 100%;
+			height: 75%;
+		}
+
+		&__img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__screenshot {
+		&__list {
+			width: 25%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			overflow: scroll;
+
+			@include breakpoints.s {
+				flex-direction: row;
+				max-width: 100%;
+				width: 100%;
+				height: 25%;
+			}
+		}
+
+		&__container {
+			width: 100%;
+			height: 150px;
+			background-color: black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@include breakpoints.s {
+				height: 100%;
+				flex-direction: row;
+				overflow-x: scroll;
+			}
+		}
+	}
+
+	&__thumbnail {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+
+		&__container {
+			border: 1px solid transparent;
+			width: 90%;
+			height: 90%;
+
+			&:hover {
+				border: 1px solid white;
+				cursor: pointer;
+			}
+		}
+	}
+}

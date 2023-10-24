@@ -1,0 +1,15 @@
+@use "../../styles/base.scss";
+
+.data_slice {
+	font-size: 14px;
+
+	&__listing {
+		@extend .data_slice;
+		color: base.$key-color;
+	}
+
+	&__value {
+		@extend .data_slice;
+		color: white;
+	}
+}
